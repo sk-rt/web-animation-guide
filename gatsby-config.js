@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Web Design`,
+    title: `Motion Planning`,
     author: `R Sakai`,
-    description: `Web Design Guide`,
+    description: `Motion Planning Guide`,
     siteUrl: `https://web-d.netlify.com/`
   },
   plugins: [
