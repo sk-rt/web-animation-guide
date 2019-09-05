@@ -3,7 +3,7 @@ module.exports = {
     title: `Motion Planning`,
     author: `R Sakai`,
     description: `Motion Planning Guide`,
-    siteUrl: `https://web-d.netlify.com/`
+    siteUrl: `https://motion-p.netlify.com`
   },
   plugins: [
     {
@@ -61,7 +61,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-118267445-2`
+        trackingId: `UA-118267445-3`
       }
     },
     `gatsby-plugin-offline`,

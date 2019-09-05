@@ -1,5 +1,8 @@
 @charset "utf-8";
-
+$c-font: #fff;
+$c-bg: #262626;
+$c-bg-light: #444;
+$c-bg-dark: #000;
 /* ~~~~~ SP ~~~~~~ */
 @media (max-width: 480px) {
     html {
@@ -9,6 +12,8 @@
 
 body {
     letter-spacing: 0.05em;
+    background-color: $c-bg;
+    color: $c-font;
 }
 
 a {
@@ -22,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 500
+    font-weight: 500;
 }
 
 button {

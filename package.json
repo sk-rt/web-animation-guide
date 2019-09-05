@@ -50,7 +50,7 @@
     "typography": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
   },
-  "homepage": "https://web-d.netlify.com/",
+  "homepage": "https://motion-p.netlify.com/",
   "keywords": [
     "gatsby"
   ],
@@ -58,7 +58,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sk-rt/web-design-guide.git"
+    "url": "git+https://github.com/sk-rt/web-animation-guide.git"
   },
   "scripts": {
     "build": "gatsby build",

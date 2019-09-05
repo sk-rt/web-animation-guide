@@ -9,7 +9,7 @@
     display: inline-block;
     font-size: 0.9rem;
     font-weight: 600;
-    color: rgba(#000, 0.3);
+    color: rgba($c-font, 0.4);
     margin-right: 0.7em;
     margin: 0 0.7em 0.7em 0;
     padding: 0.2em 1em;
@@ -19,8 +19,8 @@
     transition: 0.4s;
     &.is-current {
         background-color: #000;
-        border-color: #000;
-        color: #fff;
+        border-color: $c-font;
+        color: $c-font;
     }
     /* ~~~~~ SP ~~~~~~ */
     @media (max-width: 767px) {
