@@ -1,0 +1,17 @@
+{
+    "name": "doc",
+    "version": "1.0.0",
+    "description": "Develop sample files",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "npm run server & npm run copy:watch",
+        "server": "browser-sync start --config bs-config.js",
+        "copy": "cpx 'public/**/*.zip' ../static/samples/",
+        "copy:watch": "npm run copy -- --watch"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.26.3",
+        "cpx": "^1.5.0"
+    }
+}

@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+.gatsby-highlight {
+    position: relative;
+    margin: 1.3em auto;
+
+    &::after {
+        content: attr(data-language);
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgba(#FFF, 0.2);
+        padding: 0 1em;
+        color: #FFF;
+        font-weight: 600;
+        font-size: .9em;
+        border-radius: 8px 0 4px 0;
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+        font-family: 'Source Sans Pro', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+        line-height: 1.5;
+        border: none;
+    }
+
+    pre[class*="language-"] {
+        padding: 2rem;
+        border-radius: 8px;
+        padding-top: 3rem;
+    }
+
+    ::selection {
+        background-color: rgba(#CCC, 0.3);
+    }
+}
+
+:not(pre)>code[class*="language-"] {
+    background-color: #E5e5e5;
+    border: none;
+    padding: .1em .4em;
+    box-shadow: none;
+    font-size: 1em;
+    color: #444;
+    margin: 0 .2em;
+}
