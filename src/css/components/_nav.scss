@@ -1,0 +1,203 @@
+.page-container {
+    transition: 0.3s ease-in-out;
+    position: relative;
+    &.is-show-drawer {
+        padding-left: 320px;
+        @media (max-width: 1120px) {
+            padding-left: 0;
+        }
+    }
+}
+.c-posts-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: #fff;
+    width: 320px;
+    transform: translate(-100%);
+    transition: 0.3s ease-in-out;
+    box-shadow: 5px 5px 60px rgba(0, 0, 0, 0);
+
+    &.is-show {
+        transform: translate(0%);
+        box-shadow: 5px 5px 60px rgba(0, 0, 0, 0.07);
+    }
+
+    /* ~~~~~ SP ~~~~~~ */
+    @media (max-width: 767px) {
+        width: calc(100% - 60px);
+        max-width: 320px;
+    }
+}
+
+.c-posts-nav__toggle {
+    position: absolute;
+    left: 100%;
+    width: 80px;
+    height: 80px;
+    transition: 0.3s;
+
+    @media (max-width: 767px) {
+        width: 60px;
+        height: 60px;
+    }
+    span,
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: #222;
+        border-radius: 3px;
+        margin-top: -4px;
+        margin-left: -4px;
+        transition: 0.6s ease-in-out;
+        transform-origin: 100% 50%;
+    }
+
+    &::before {
+        transform: translate(-12px);
+    }
+
+    &::after {
+        transform: translate(12px);
+    }
+
+    &:hover {
+        &:not(.is-show) {
+            &::before {
+                transform: translate(-10px);
+            }
+
+            &::after {
+                transform: translate(10px);
+            }
+        }
+    }
+
+    &.is-show {
+        transform: rotate(180deg);
+        background-color: rgba(0, 0, 0, 0.05);
+        span,
+        &::after,
+        &::before {
+            height: 4px;
+            margin-top: -2px;
+            transition-delay: 0.1s;
+            // background-color: #fff;
+        }
+
+        span {
+            margin-left: -11px;
+            width: 22px;
+        }
+
+        &::after,
+        &::before {
+            margin-left: -2px;
+            width: 14px;
+            // transition-delay: .2s;
+        }
+
+        &::before {
+            transform: translateY(-1px) rotate(-45deg);
+        }
+
+        &::after {
+            transform: translateY(1px) rotate(45deg);
+        }
+    }
+}
+
+.c-posts-nav__nav {
+    overflow: auto;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 0 60px;
+    box-sizing: border-box;
+    /*スクロールバー全体*/
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    /*スクロールバーの軌道*/
+    &::-webkit-scrollbar-track {
+        border-radius: 14px;
+        background-color: #fff;
+    }
+
+    /*スクロールバーの動く部分*/
+    &::-webkit-scrollbar-thumb {
+        background-color: #e8e8e8;
+        border-radius: 10px;
+        border: 2px solid #fff;
+        cursor: pointer;
+        &:hover {
+            background-color: #ccc;
+        }
+    }
+}
+.c-posts-nav__list {
+    border-bottom: 8px solid rgba(0, 0, 0, 0.05);
+}
+%post-nav__item {
+    padding: 0.8em 1em;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.c-posts-nav__static-page {
+    display: block;
+    @extend %post-nav__item;
+}
+.c-posts-nav__top {
+    display: block;
+    font-weight: 600;
+    @extend %post-nav__item;
+    border-bottom-width: 8px;
+}
+
+.c-posts-nav__item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 0.8em;
+    @extend %post-nav__item;
+    &:hover {
+        color: #aaa;
+    }
+
+    &.is-current {
+        pointer-events: none;
+        color: #aaa;
+        background-color: #f5f5f5;
+    }
+}
+
+.c-posts-nav__index {
+    font-weight: 600;
+    flex: 0 0 2.8em;
+    position: relative;
+    padding-left: 0.6em;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 3px solid;
+        border-radius: 100%;
+        background-color: #000;
+        left: -0.3em;
+        top: 50%;
+        transform: translateY(-30%);
+    }
+}

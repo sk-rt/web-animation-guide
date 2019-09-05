@@ -1,0 +1,29 @@
+.p-tag-nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-bottom: 3rem;
+}
+.p-tag-nav__btn {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(#000, 0.3);
+    margin-right: 0.7em;
+    margin: 0 0.7em 0.7em 0;
+    padding: 0.2em 1em;
+    border: 1px solid;
+    border-radius: 1.3em;
+    line-height: 1.4;
+    transition: 0.4s;
+    &.is-current {
+        background-color: #000;
+        border-color: #000;
+        color: #fff;
+    }
+    /* ~~~~~ SP ~~~~~~ */
+    @media (max-width: 767px) {
+        font-size: 0.77rem;
+    }
+}

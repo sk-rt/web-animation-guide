@@ -1,0 +1,20 @@
+{
+  "tabWidth": 2,
+  "singleQuote": true,
+  "printWidth": 100,
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": ["*.css", "*.scss"],
+      "options": {
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": ["*.md"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}
