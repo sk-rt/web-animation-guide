@@ -6,6 +6,7 @@ class Navigation extends React.Component {
   toggle() {
     return this.props.toggleDrawer();
   }
+
   render() {
     const { current } = this.props;
     return (
@@ -36,10 +37,9 @@ class Navigation extends React.Component {
                       {posts.map(({ node }, index) => {
                         const number = `00${index + 1}`.slice(-2);
                         const title = node.frontmatter.title || node.fields.slug;
-                        const isCurrent = current && current.id === node.id;
                         return (
                           <Link
-                            className={`c-posts-nav__item ${isCurrent ? 'is-current' : ''}`}
+                            className={`c-posts-nav__item`}
                             to={node.fields.slug}
                             key={node.fields.slug}
                           >
@@ -49,7 +49,7 @@ class Navigation extends React.Component {
                         );
                       })}
                     </div>
-                    <Link className="c-posts-nav__static-page" to={`/documents/`}>
+                    <Link className={`c-posts-nav__static-page`} to={`/documents/`}>
                       2019 素材置き場
                     </Link>
                   </nav>

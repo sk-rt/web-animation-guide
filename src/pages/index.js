@@ -76,15 +76,23 @@ class BlogIndex extends React.Component {
             return false;
           }
           return (
-            <article key={node.fields.slug} className="p-post-item">
+            <article
+              key={node.fields.slug}
+              className={node.frontmatter.featuredImage ? 'p-post-item' : 'p-post-item is-no-image'}
+            >
               <Link className="p-post-item__link" to={node.fields.slug}>
                 <div className="p-post-item__index">{number}</div>
-                <div
-                  className="p-post-item__featured-image"
-                  style={{
-                    backgroundImage: `url(/featured/${node.frontmatter.featuredImage})`
-                  }}
-                />
+                {node.frontmatter.featuredImage ? (
+                  <div
+                    className="p-post-item__featured-image"
+                    style={{
+                      backgroundImage: `url(/featured/${node.frontmatter.featuredImage})`
+                    }}
+                  />
+                ) : (
+                  ''
+                )}
+
                 <div className="p-post-item__content">
                   <div>
                     <h3>{title}</h3>
