@@ -49,9 +49,9 @@ class Navigation extends React.Component {
                         );
                       })}
                     </div>
-                    <Link className={`c-posts-nav__static-page`} to={`/documents/`}>
+                    {/* <Link className={`c-posts-nav__static-page`} to={`/documents/`}>
                       2019 素材置き場
-                    </Link>
+                    </Link> */}
                   </nav>
                 </div>
               );
