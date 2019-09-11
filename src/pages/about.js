@@ -15,19 +15,12 @@ class About extends React.Component {
         <article>
           <div className="p-article__body">
             <h1>このサイトについて</h1>
-            <p>大学でのWebデザインの講義の為のサイトです。</p>
+            <p>大学での講義の為のサイトです。</p>
             <p>
-              Web開発のごく基礎を学ぶ目的であり、深く掘り下げるものではありません。
+              Webアニメーションごく基礎を学ぶ目的であり、深く掘り下げるものではありません。
               <br />
               また、難しく感じない様に、あえて触れていないこともありますのでご注意を。
             </p>
-            <a
-              href="https://github.com/sk-rt/web-design-guide"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
           </div>
         </article>
       </Layout>
