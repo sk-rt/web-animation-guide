@@ -61,7 +61,7 @@
     "url": "git+https://github.com/sk-rt/web-animation-guide.git"
   },
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby clean && gatsby build",
     "develop": "gatsby develop -p 8080",
     "start": "npm run develop",
     "serve": "gatsby serve",
