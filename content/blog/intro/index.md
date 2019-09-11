@@ -1,48 +1,70 @@
 ---
-title: Webサイトとは？
+title: Webアニメーション概要
 date: "2019-01-01"
-excerpt: "Webの基本的な仕組み"
+excerpt: "Webアニメーションの種類や目的など"
 tags: ["イントロ"]
-featuredImage: "featured-01.png"
+featuredImage: ""
+samples:
 ---
 
-# Web ページとは？
+# Web におけるアニメーションの役割
 
-主に `HTML`形式で記述されており、インターネット上に公開されている、`Webブラウザ`で表示されるページのこと。
-Web ページが集まり Web サイトとなる。
+## ユーザーアクションに対するリアクションや、UI の補助など
 
-## Web にも色々ある
+主にユーザービリティを向上させるための説明的なインタラクション。  
+**マイクロインタラクション**
 
-Web と言っても様々なジャンルのサイトがあり、必要な技術も様々。
+- (例) ON/OFF ボタンのアクション
 
-- **ブランディングサイト / プロモーションサイト**  
-  企業や店舗、商品、ブランド、サービスなどを紹介するサイト。
-- **Web アプリ / Web サービス**  
-  単なる情報提供でなく、機能やサービスを提供するサイト。  
-  また、コンテンツそのものが売り物になるサイト。
-- **ショッピングサイト**  
-  Web 上で買い物ができるサイト。
-- **メディアサイト**  
-  記事やニュースなどを配信するサイト。
-- **SNS**  
-  インターネット上での交流サービス。
-- **etc**
+  [<img src="https://cdn.dribbble.com/users/108183/screenshots/5429846/switcher_xliv.gif" width="300px">
+  ](https://dribbble.com/shots/5429846-Switcher-XLIV?utm_source=Clipboard_Shot&utm_campaign=Volorf&utm_content=Switcher%20XLIV&utm_medium=Social_Share)
 
-# Web ページが表示されるまで
+* (例) いいねボタンのアクション
 
-1. ブラウザで `URL`を指定 (**リクエスト**)。
-1. `Webサーバー`からデータ(`HTML`・`CSS`・`JavaScript`や画像・フォントなど)が帰ってくる (**レスポンス**)。
-1. サーバーから取得したデータを、ブラウザが解釈しウィンドウに`レンダリング(描画)`する。
+  [<img src="https://cdn.dribbble.com/users/75982/screenshots/2547034/twitter_like_button.gif" width="300px">
+  ](https://dribbble.com/shots/2547034-Twitter-like-button-mashup?utm_source=Clipboard_Shot&utm_campaign=bwadds&utm_content=Twitter%20like%20button%20mashup&utm_medium=Social_Share)
 
-※ サーバー側の事を`サーバーサイド`、またそこで行われる処理を `バックエンド`と呼ぶ  
-※ ブラウザ側の事を`クライアントサイド` 、またそこで行われる処理を `フロントエンド`と呼ぶ
+- (例) フォーム送信時のローディング
 
-![Webページ](./fig_01_01.png) ![Webページ2](./fig_01_02.png)
+  [<img src="https://cdn.dribbble.com/users/1341046/screenshots/6542025/untitled-2.gif" width="300px">
+  ](https://dribbble.com/shots/6542025-Check-Loading-Animation?utm_source=Clipboard_Shot&utm_campaign=EdgarVehbiu&utm_content=Check%20Loading%20Animation&utm_medium=Social_Share)
 
-## URL とは
+## ユーザーへの注意を引くためのアニメーションや、 サイトのコンセプトなどを表現するもの
 
-インターネット上の住所のようなもの。  
-ドメイン`example.jp` 部分で**サーバー**なのか、 `/(スラッシュ)`以下で**どのファイル**を取得するか指定する。
-Web サーバーも一般的な PC と同じくフォルダが入れ子になった `ツリー構造`になっており、 `/ファイル・フォルダ名` で取得するファイルを指定する。
+- (例) コンテンツの切り替え時のトランジション
 
-![URLとは](./fig_01_03.png)
+[<img alt="Meroë bordeaux ochre transition landing page carousel burgundy fashion" src="https://cdn.dribbble.com/users/1846841/screenshots/4306748/meroe_.gif" width="450px">
+](https://dribbble.com/shots/5429846-Switcher-XLIV?utm_source=Clipboard_Shot&utm_campaign=Volorf&utm_content=Switcher%20XLIV&utm_medium=Social_Share)
+
+- (例) スクロール時の表示アニメーション
+
+[<img alt="Waterfalls Scroll Distort Effect interaction clean after effects landing page animation ux interface web website ui web design" src="https://cdn.dribbble.com/users/688456/screenshots/5400855/ezgif.com-optimize__18_.gif" width="450px">
+](https://dribbble.com/shots/5400855-Waterfalls-Scroll-Distort-Effect?utm_source=Clipboard_Shot&utm_campaign=nathanriley&utm_content=Waterfalls%20Scroll%20Distort%20Effect&utm_medium=Social_Share)
+
+- (例) ビジュアルを印象づけるためのアニメーション表現
+
+[<img alt="F R A N C O fade scroll ux ui animated transition animation gif motion hiking camping illustration mountain" src="https://cdn.dribbble.com/users/1846841/screenshots/4301291/f_r_a_n_c_o.gif" width="450px">](https://dribbble.com/shots/4301291-F-R-A-N-C-O?utm_source=Clipboard_Shot&utm_campaign=zakeklund&utm_content=F%20R%20A%20N%20C%20O&utm_medium=Social_Share)
+
+# アニメーションの実装
+
+## CSS アニメーション
+
+CSS `transition` や `animation` プロパティを使って、比較的簡単に実装できるが、複雑なアニメーションは難しい。  
+また、`:hover`,`:active` などを除いてユーザーのアクションを取得できない。（マウスイベント、タッチイベント、スクロールイベント、フォームイベントなど）
+
+## JavaScript を使ったアニメーション
+
+JavaScript を使って要素を変更することで行う。  
+ユーザーインタラクションや環境などを取得してインタラクティブなアニメーションが可能。
+
+また、全て自分で実装しなくても、目的に応じた豊富な JavaScript ライブラリがある。
+
+**〈主なアニメーションライブラリ〉**
+TweenMax,
+anime.js,
+velocity.js,
+kute.js,
+p5.js
+など
+
+<!-- _*本サイトでは JS の基礎からユーザーインタラクションの取得、アニメーションの*_ -->
