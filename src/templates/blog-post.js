@@ -19,21 +19,26 @@ class BlogPostTemplate extends React.Component {
         ))
       : '';
     //サンプルファイル
-    const sampleListBlock = (samples => {
-      if (!samples || samples.length === 0) return;
+    const exercisesListBlock = (exercises => {
+      if (!exercises || exercises.length === 0) return;
+      const _exercises = exercises.filter(ex => {
+        return ex.file && ex.title;
+      });
+      console.log(exercises);
+      if (_exercises.length === 0) return;
       return (
         <div className="p-post-examples">
-          <p>コードサンプル</p>
-          {samples.map((sample, index) => {
+          <p>実習ファイル</p>
+          {_exercises.map((exercise, index) => {
             return (
-              <a href={`/samples/${sample.file}`} key={index}>
-                {sample.title}
+              <a href={`/exercises/${exercise.file}`} key={index}>
+                {exercise.title}
               </a>
             );
           })}
         </div>
       );
-    })(post.frontmatter.samples);
+    })(post.frontmatter.exercises);
     return (
       <Layout location={this.props.location} title={siteTitle} current={post}>
         <SEO title={post.frontmatter.title} description={post.excerpt} lang="ja" />
@@ -42,7 +47,7 @@ class BlogPostTemplate extends React.Component {
             <h1 className="p-article__title">{post.frontmatter.title}</h1>
             <p className="p-article__tags c-tag-list">{tagList}</p>
           </header>
-          {sampleListBlock}
+          {exercisesListBlock}
           <div
             className="p-article__body"
             dangerouslySetInnerHTML={{ __html: post.html }}
@@ -91,7 +96,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         tags
         excerpt
-        samples {
+        exercises {
           file
           title
         }

@@ -4,7 +4,7 @@ date: "2019-01-01"
 excerpt: "Webアニメーションの種類や目的など"
 tags: ["イントロ"]
 featuredImage: ""
-samples:
+exercises: [{ file: "", title: "" }]
 ---
 
 # Web におけるアニメーションの役割

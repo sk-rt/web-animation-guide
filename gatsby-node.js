@@ -19,7 +19,7 @@ exports.createPages = ({ graphql, actions }) => {
                 date(formatString: "MMMM DD, YYYY")
                 tags
                 excerpt
-                samples {
+                exercises {
                   file
                   title
                 }
