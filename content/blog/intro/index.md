@@ -49,8 +49,8 @@ exercises: [{ file: "", title: "" }]
 
 ## CSS アニメーション
 
-CSS `transition` や `animation` プロパティを使って、比較的簡単に実装できるが、複雑なアニメーションは難しい。  
-また、`:hover`,`:active` などを除いてユーザーのアクションを取得できない。（マウスイベント、タッチイベント、スクロールイベント、フォームイベントなど）
+`transition` や `animation` プロパティを使って、比較的簡単に実装できるが、複雑なアニメーションは難しい。  
+また、`:hover`,`:active` などを除いて、**ユーザーのアクションを取得できない**。（マウスイベント、タッチイベント、スクロールイベント、フォームイベントなど）
 
 ## JavaScript を使ったアニメーション
 
@@ -59,12 +59,50 @@ JavaScript を使って要素を変更することで行う。
 
 また、全て自分で実装しなくても、目的に応じた豊富な JavaScript ライブラリがある。
 
-**〈主なアニメーションライブラリ〉**
-TweenMax,
-anime.js,
-velocity.js,
-kute.js,
-p5.js
-など
+# アニメーションの手法やライブラリ
 
-<!-- _*本サイトでは JS の基礎からユーザーインタラクションの取得、アニメーションの*_ -->
+主に以下の手法を織り交ぜて
+
+### DOM アニメーション
+
+DOM (Html の要素) の style を連続して変更して行うアニメーション。  
+UI に対するアニメーションに有効。
+
+> **〈主な DOM アニメーション系ライブラリ〉**  
+> TweenMax,
+> anime.js,
+> kute.js,
+> など
+
+### Canvas / WebGL
+
+DOM(HTML 要素)を変更するのではなく `<canvas>` 要素に JavaScript でグラフィックスを描画する。  
+かつての Flash の様な自由でインタラクティブな表現や 3D 表現も可能。
+
+- [HTML5 で作る Canvas アニメーションの基礎](https://www.webopixel.net/javascript/1001.html)
+- [WebGL 入門 - ics.media](https://ics.media/entry/2328/)
+
+> **〈主な Canvas 系ライブラリ〉**  
+> PixiJS (2D),
+> Three.js(3D),
+> Matter.js(物理演算),
+> など
+
+### SVG アニメーション
+
+[SVG](https://webkikaku.co.jp/blog/webdesign/svg_for_webdesigner/) 要素に対して行うアニメーション。  
+SVG が HTML/CSS と近いため、比較的わかりやすく、CSS のみでもアニメーション可。  
+ロゴやイラストなど、パスでできたアートワークと親和性が高い。(illustrator から書き出しできる)
+
+- [SVG アニメーションの作り方まとめ - ics.media](https://ics.media/entry/15970/)
+- [SVG でワードアート](https://slides.com/hashrock/svg-2#/)
+
+> **〈主な SVG 系ライブラリ〉**  
+> Snap.svg,
+> D3.js,
+> kute.js,
+> など
+
+### video やアニメ Gif など
+
+`<video>`タグで動画が埋め込める。JavaScript で操作できる(シークや再生・ストップなど)ので工夫次第では面白いものができるかも。

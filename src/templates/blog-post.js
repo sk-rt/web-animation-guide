@@ -24,7 +24,6 @@ class BlogPostTemplate extends React.Component {
       const _exercises = exercises.filter(ex => {
         return ex.file && ex.title;
       });
-      console.log(exercises);
       if (_exercises.length === 0) return;
       return (
         <div className="p-post-examples">
