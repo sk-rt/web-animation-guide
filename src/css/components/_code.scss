@@ -13,12 +13,13 @@
         padding: 0 1em;
         color: #fff;
         font-weight: 600;
-        font-size: 0.9em;
+        font-size: 0.8em;
         border-radius: 8px 0 8px 0;
     }
 
     code[class*='language-'],
     pre[class*='language-'] {
+        font-size: 1rem;
         font-family: 'Source Sans Pro', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier,
             monospace;
         line-height: 1.5;

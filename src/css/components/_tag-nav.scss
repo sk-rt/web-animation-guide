@@ -4,6 +4,11 @@
     justify-content: flex-start;
     align-items: stretch;
     margin-bottom: 3rem;
+    @media (max-width: 767px) {
+        flex-wrap: nowrap;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 .p-tag-nav__btn {
     display: inline-block;
@@ -24,6 +29,6 @@
     }
     /* ~~~~~ SP ~~~~~~ */
     @media (max-width: 767px) {
-        font-size: 0.77rem;
+        font-size: 0.9rem;
     }
 }
