@@ -6,7 +6,7 @@
 
     /* ~~~~~ SP ~~~~~~ */
     @media (max-width: 767px) {
-        padding: 6rem 1.5rem 5%;
+        padding: 2em 1.5rem 5%;
     }
 }
 
@@ -15,7 +15,7 @@
 
     /* ~~~~~ SP ~~~~~~ */
     @media (max-width: 767px) {
-        padding: 0 0 4rem;
+        padding: 0 0 6rem;
     }
 }
 
@@ -25,7 +25,9 @@
 
     /* ~~~~~ SP ~~~~~~ */
     @media (max-width: 767px) {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        padding-left: 80px;
+        text-align: right;
     }
 }
 
