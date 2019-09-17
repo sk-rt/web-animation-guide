@@ -9,6 +9,9 @@
         border: 1px solid;
         border-radius: 1.3em;
         line-height: 1.4;
+        @media (max-width: 767px) {
+            font-size: 0.8rem;
+        }
     }
 }
 
@@ -105,11 +108,11 @@
         display: block;
 
         h3 {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
 
         p {
-            font-size: 0.8em;
+            font-size: 0.9em;
             margin-bottom: 1em;
         }
 
