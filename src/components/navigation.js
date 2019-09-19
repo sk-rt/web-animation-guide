@@ -37,6 +37,15 @@ class Navigation extends React.Component {
                       {posts.map(({ node }, index) => {
                         const number = `00${index + 1}`.slice(-2);
                         const title = node.frontmatter.title || node.fields.slug;
+                        //サンプルファイル
+                        const exercisesListBlock = (exercises => {
+                          if (!exercises || exercises.length === 0) return;
+                          const _exercises = exercises.filter(ex => {
+                            return ex.file && ex.title;
+                          });
+                          if (_exercises.length === 0) return;
+                          return <i className="c-posts-nav__exercise-icon">EX</i>;
+                        })(node.frontmatter.exercises);
                         return (
                           <Link
                             className={`c-posts-nav__item`}
@@ -45,6 +54,7 @@ class Navigation extends React.Component {
                           >
                             <span className="c-posts-nav__index">{number}</span>
                             <div>{title}</div>
+                            {exercisesListBlock}
                           </Link>
                         );
                       })}
@@ -80,6 +90,10 @@ export const navQuery = graphql`
           frontmatter {
             title
             tags
+            exercises {
+              file
+              title
+            }
           }
         }
       }

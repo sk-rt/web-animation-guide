@@ -7,11 +7,11 @@
     "scripts": {
         "start": "npm run server & npm run copy:watch",
         "server": "browser-sync start --config bs-config.js",
-        "copy": "cpx 'public/**/*.zip' ../static/samples/",
+        "copy": "cpx 'public/**/*.zip' ../static/exercises/",
         "copy:watch": "npm run copy -- --watch"
     },
     "devDependencies": {
-        "browser-sync": "^2.26.3",
+        "browser-sync": "^2.26.7",
         "cpx": "^1.5.0"
     }
 }
