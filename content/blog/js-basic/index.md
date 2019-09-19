@@ -1,5 +1,5 @@
 ---
-title: JS 基礎文法 1
+title: JS 基礎 - 変数
 date: "2019-02-01"
 excerpt: "JSファイルの作成や変数宣言"
 tags: ["基礎"]
