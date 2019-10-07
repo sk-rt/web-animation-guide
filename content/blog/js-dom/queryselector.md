@@ -96,6 +96,7 @@ const items = document.querySelectorAll(".item");
 // For文で要素を一つずつ取り出し
 for (let index = 0; index < items.length; index++) {
   const item = items[index];
+  console.log(item);
 }
 ```
 
@@ -120,8 +121,10 @@ myElement.classList.remove("my-class");
 element の style を変更する。
 
 ```js
-myElement.style.color("#000");
-myElement.style.fontSize("20px");
+const myElement = document.querySelector("#my-element");
+
+myElement.style.color = "#FF0000";
+myElement.style.fontSize = "20px";
 ```
 
 ### element.innerHTML
@@ -129,6 +132,8 @@ myElement.style.fontSize("20px");
 element の 中身を取得・変更する。
 
 ```js
+const myElement = document.querySelector("#my-element");
+
 //  中身を取得して `content` に代入
 const content = myElement.innerHTML;
 
