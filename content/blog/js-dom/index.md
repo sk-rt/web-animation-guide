@@ -1,7 +1,7 @@
 ---
 title: DOM - DOMとは
 date: "2019-03-01"
-excerpt: " 全ての基本となる window / documentオブジェクトについて"
+excerpt: "ブラウザ操作の基本となるwindow / documentオブジェクトについて"
 tags: ["DOM"]
 featuredImage: ""
 exercises: []
