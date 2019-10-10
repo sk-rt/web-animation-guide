@@ -4,7 +4,7 @@ date: "2019-03-03"
 excerpt: " ユーザーの操作や状態の変化などを検知する。"
 tags: ["DOM"]
 featuredImage: ""
-exercises: [{ file: "dom-event.zip", title: "clickイベント" }]
+exercises: [{ file: "dom-event.zip", title: "clickイベント演習" }]
 ---
 
 # イベントとは
@@ -30,8 +30,10 @@ exercises: [{ file: "dom-event.zip", title: "clickイベント" }]
 # イベントの種類と例
 
 `イベント名` には `click`,`load`,`scroll`などなど所定のイベントを指定できる。  
-イベントターゲットはイベントの種類によって様々なので調べて使うこと。  
-参考: [イベントリファレンス](https://developer.mozilla.org/ja/docs/Web/Events)
+イベントターゲットはイベントの種類によって様々なので調べて使うこと。
+
+参考: [JavaScript イベントハンドラ](https://web-designer.cman.jp/javascript_ref/event_list/)  
+＊上記サイトのイベント名の`on`は無しで OK。
 
 ## click イベント
 
