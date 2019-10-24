@@ -4,7 +4,7 @@ date: "2019-04-01"
 excerpt: " setTimeout() / setInterval() を使ったアニメーション"
 tags: ["応用"]
 featuredImage: ""
-exercises: []
+exercises: [{ file: "timer-animation.zip", title: "タイマーアニメーション演習" }]
 ---
 
 # タイマー処理
@@ -26,7 +26,8 @@ setTimeout(greeting, 3000); // 3秒後に greeting を実行
 
 ## setInterval( 関数 , 時間 )
 
-一定時間ごとに処理を実行する。
+一定時間ごとに処理を実行する。  
+＊`number++`は `number = number+1`と同じ意味 (1 を加算)
 
 ```js
 let number = 1;
@@ -61,6 +62,8 @@ timerID = setInterval(counter, 3000);
 
 ## 例 1
 
+＊
+
 <iframe height="400" style="width: 100%;" scrolling="no" title="setInterval" src="https://codepen.io/RsakaiForEducation/embed/bGGVVxr?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/RsakaiForEducation/pen/bGGVVxr'>setInterval</a> by R Sakai
   (<a href='https://codepen.io/RsakaiForEducation'>@RsakaiForEducation</a>) on <a href='https://codepen.io'>CodePen</a>.
@@ -90,7 +93,7 @@ click イベントでアニメーションの開始/停止
 # アニメーション用のタイマー処理 requestAnimationFrame()
 
 アニメーション専用のタイマーに`requestAnimationFrame()` がある。  
-間隔は常にブラウザのリフレッシュレートおおよそ *毎秒 60 回(60FPS)*で実行される。
+間隔は常にブラウザのリフレッシュレート、 _毎秒 60 回(60FPS)_ で実行される。
 
 ```js
 let position = 0;
@@ -103,7 +106,7 @@ function loop() {
 requestAnimationFrame(loop);
 ```
 
-<iframe height="400" style="width: 100%;" scrolling="no" title="requestAnimationFrame" src="https://codepen.io/RsakaiForEducation/embed/dyyYGmW?height=265&theme-id=0&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="400" style="width: 100%;" scrolling="no" title="requestAnimationFrame" src="https://codepen.io/RsakaiForEducation/embed/dyyYGmW?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/RsakaiForEducation/pen/dyyYGmW'>requestAnimationFrame</a> by R Sakai
   (<a href='https://codepen.io/RsakaiForEducation'>@RsakaiForEducation</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
