@@ -62,8 +62,6 @@ timerID = setInterval(counter, 3000);
 
 ## 例 1
 
-＊
-
 <iframe height="400" style="width: 100%;" scrolling="no" title="setInterval" src="https://codepen.io/RsakaiForEducation/embed/bGGVVxr?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/RsakaiForEducation/pen/bGGVVxr'>setInterval</a> by R Sakai
   (<a href='https://codepen.io/RsakaiForEducation'>@RsakaiForEducation</a>) on <a href='https://codepen.io'>CodePen</a>.
