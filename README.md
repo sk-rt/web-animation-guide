@@ -1,9 +1,8 @@
-# Web Design Guide
+# Web Animation Guide
 
-＊この[サイト](https://web-d.netlify.com/)は大学の講義用に制作されました。  
+＊この[サイト](https://motion-p.netlify.com/)は大学の講義用に制作されました。  
 授業時間の関係もあり、詳細な説明は省いてます。
 
 ## サイトの目的
 
-- `HTML`、`CSS`を中心にした Web フロントエンド開発の基礎部分の学習
-- デザイン制作からコーディングまで一連のフローの学習
+- JavaScript の基礎構文・DOM API の基礎を学び、Web アニメーションの技術を習得する。
