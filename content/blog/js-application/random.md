@@ -1,7 +1,7 @@
 ---
 title: 応用 - ランダム
 date: "2019-04-02"
-excerpt: " Math.random() "
+excerpt: "Math.random()を使った処理"
 tags: ["応用"]
 featuredImage: ""
 exercises: [{ file: "random.zip", title: "ランダム演習" }]
