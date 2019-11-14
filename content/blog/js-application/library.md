@@ -1,16 +1,19 @@
 ---
 title: 応用 - ライブラリ
-date: "2019-04-02"
+date: "2019-04-04"
 excerpt: "外部ライブラリの使用方法"
 tags: ["応用"]
 featuredImage: ""
-exercises: []
+exercises: [{ title: "アニメーションライブラリ演習", file: "animation-by-library.zip" }]
 ---
 
 # JavaScript ライブラリとは？
 
 JavaScript で書かれた、ある機能などを簡単に使えるようにまとめたもの。  
 世界中の人や企業が色んなライブラリを公開してくれている。
+
+- [Searchlibs ＊"animation"で検索](http://searchlibs.com/?q=animation)
+- [Javascripting](https://www.javascripting.com/)
 
 # 導入方法
 
@@ -61,7 +64,7 @@ anime({
 });
 ```
 
-# ライブラリ紹介
+# UI 系ライブラリ紹介
 
 ### DOM アニメーション系
 
@@ -78,7 +81,7 @@ anime({
 - [Glide.js](https://glidejs.com/)  
   軽量でモダンなスライダー
 
-### ギャラリー系
+### モーダル・画像ポップアップ系
 
 - [LigntBox](https://lokeshdhakar.com/projects/lightbox2/)  
   大昔からある画像のポップアップライブラリ(要 jQuery)
@@ -89,20 +92,44 @@ anime({
 - [lightgallery.js](https://sachinchoolur.github.io/lightgallery.js/)
   軽量のポップアップライブラリ
 
-#### 　
+### スクロール連動系
+
+- [AOS](https://michalsnik.github.io/aos/)  
+  スクロールに応じてアニメーション
+- [Sal.js](https://mciastek.github.io/sal/)
+
+### Canvas/WebGL/SVG チャート 系
+
+- [Three.js](https://threejs.org/)  
+  3D WebGL ライブラリ
+- [PixiJS](https://www.pixijs.com/)  
+  2D WebGL ライブラリ
+- [D3.js](https://d3js.org/)  
+  データビジュアライザ
+
+### [番外] SPA フレームワーク
+
+UI を構築するための流行のフレームワーク。  
+もし Web アプリケーションなどを作りたかったり、Web 系に就職したいならぜひ。
+
+- [React](https://ja.reactjs.org/)
+- [Vue.js](https://jp.vuejs.org/)
+
+---
 
 > #### jQuery について
 >
 > 一世風靡したライブラリで、今も多くのサイトで使用されている。  
-> DOM の扱いや、イベント・アニメーション処理などを`$`から始まる独自の記法で簡潔に書ける。
+> DOM の扱いや、イベント・アニメーション処理などを`$`から始まる独自の記法で簡潔に書ける。  
+> また、ブラウザの種類による API の違いやバグなどを吸収してくれる。
 >
 > 標準　: `document.querySelector(".el").classList.add("on")`  
 > jQuery: `$(".el").addClass("on")`
 >
-> - あまりに普及しすぎて Web 系の記事では jQuery を読みこむ前提で書かれていることもあるので注意( `$`がでてきたらほとんど jQuery)
-> - 現在では jQuery に頼らずに Web を構築することが可能で、JavaScript の標準の書き方と違う書き方を覚える必要があるので、_この講義では jQuery は扱いません_。
+> - あまりに普及したので Web 系の記事では jQuery を使用する前提で書かれていることもあるので注意( `$`がでてきたらほとんど jQuery)
+> - 現在では jQuery に頼らずに Web を構築することが可能で、JavaScript の標準の書き方と違う書き方を覚える必要があるので、_この講義では jQuery は扱かわない_。
 > - [jQuery](https://jquery.com/) 公式サイト
 > - [You Don't Need jQuery](https://qiita.com/tatesuke/items/b9548dd484b01b139b74)  
 >   jQuery はもう必要ないと提案した有名な記事の日本語訳。
 > - [jQuery とは何なのか？](https://qiita.com/ygkn/items/eed01ae9c01339d6086a)  
->    jQuey の歴史を簡単にまとめたきじ。
+>    jQuey の歴史を簡単にまとめた記事。
