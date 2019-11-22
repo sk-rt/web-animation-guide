@@ -34,6 +34,15 @@ class About extends React.Component {
               </h6>
               <h4>【参考】</h4>
               <ul>
+                   <li>
+                  <a
+                    href="http://takeodoman.jp/kadai/ex01.zip"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    サンプル(道満)
+                  </a>
+                </li>
                 <li>
                   <a
                     href="https://x-ten.2018.sakairyuta.com/"
