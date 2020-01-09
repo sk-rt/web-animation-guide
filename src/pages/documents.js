@@ -18,6 +18,41 @@ class About extends React.Component {
           </header>
           <div className="p-article__body">
             <section className="p-document-section">
+              <h1>課題提出</h1>
+              <p>
+                <small>2020.1.8</small>
+              </p>
+              <h5>● 提出前に確認</h5>
+              <a href={`/docs/mp_2019_work.pdf`} target="_blank" rel="noopener noreferrer">
+                提出フォーマット
+              </a>
+              を良く読むこと。
+              <ul>
+                <li>提出フォルダ名が自分の学籍番号になっているか確認。ex. "x18001"</li>
+                <li>
+                  フォルダ直下に<em>"index.html"</em>と<em>"author.json"</em>が入っているか確認。
+                </li>
+                <li>
+                  ファイル名・フォルダ名に<em>日本語や記号</em>が使われていないか確認。
+                </li>
+                <li>
+                  ファイルが重すぎないか、余計なファイルが入っていないか確認。(多くても50MB以内になる様に)
+                </li>
+              </ul>
+              <h5>
+                ● 作品一覧ページ <small>＊後日こちらでアップロードします。</small>
+              </h5>
+              <h6>
+                <a
+                  href={`https://mp-works-2019.netlify.com/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://mp-works-2019.netlify.com/
+                </a>
+              </h6>
+            </section>
+            <section className="p-document-section">
               <h1>最終課題制作</h1>
               <p>
                 <small>2019.11.21</small>
@@ -34,7 +69,7 @@ class About extends React.Component {
               </h6>
               <h4>【参考】</h4>
               <ul>
-                   <li>
+                <li>
                   <a
                     href="http://takeodoman.jp/kadai/ex01.zip"
                     target="_blank"
