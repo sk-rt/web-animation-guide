@@ -62,7 +62,7 @@
   },
   "scripts": {
     "build": "gatsby clean && gatsby build",
-    "develop": "gatsby develop -p 8080",
+    "develop": "gatsby develop -p 8989",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "lint:fix": "eslint src/**/*.js --fix",

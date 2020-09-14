@@ -11,10 +11,10 @@ class Navigation extends React.Component {
     const { current } = this.props;
     return (
       <ThemeContext.Consumer>
-        {context => (
+        {(context) => (
           <StaticQuery
             query={navQuery}
-            render={data => {
+            render={(data) => {
               const posts = data.allMarkdownRemark.edges;
               const { isShowDrawer, toggleDrawer } = context;
               return (
@@ -38,9 +38,9 @@ class Navigation extends React.Component {
                         const number = `00${index + 1}`.slice(-2);
                         const title = node.frontmatter.title || node.fields.slug;
                         //サンプルファイル
-                        const exercisesListBlock = (exercises => {
+                        const exercisesListBlock = ((exercises) => {
                           if (!exercises || exercises.length === 0) return;
-                          const _exercises = exercises.filter(ex => {
+                          const _exercises = exercises.filter((ex) => {
                             return ex.file && ex.title;
                           });
                           if (_exercises.length === 0) return;
@@ -62,9 +62,9 @@ class Navigation extends React.Component {
                     <Link className={`c-posts-nav__static-page`} to={`/link/`}>
                       リンク
                     </Link>
-                    <Link className={`c-posts-nav__static-page`} to={`/documents/`}>
+                    {/* <Link className={`c-posts-nav__static-page`} to={`/documents/`}>
                       2019 素材置き場
-                    </Link>
+                    </Link> */}
                   </nav>
                 </div>
               );
