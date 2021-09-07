@@ -14,7 +14,8 @@
     top: 0;
     bottom: 0;
     z-index: 100;
-    background-color: $c-bg-dark;
+    background-color: var(--bg-color-1);
+    border-right: 1px solid var(--border-color-1);
     width: 320px;
     transform: translate(-100%);
     transition: 0.3s ease-in-out;
@@ -40,7 +41,8 @@
     transition: 0.3s;
     border-radius: 100%;
     margin: 10px;
-    background-color: rgba(#505050, 0.8);
+    background-color: var(--bg-color-1);
+    border: 1px solid var(--border-color-1);
 
     @media (max-width: 767px) {
         width: 60px;
@@ -56,7 +58,7 @@
         display: block;
         width: 6px;
         height: 6px;
-        background-color: $c-font;
+        background-color: var(--font-color);
         border-radius: 3px;
         margin-top: -4px;
         margin-left: -4px;
@@ -73,6 +75,7 @@
     }
 
     &:hover {
+        background-color: var(--bg-color-2);
         &:not(.is-show) {
             &::before {
                 transform: translate(-10px);
@@ -132,14 +135,14 @@
     /*スクロールバーの軌道*/
     &::-webkit-scrollbar-track {
         border-radius: 0;
-        background-color: #555;
+        background-color: var(--bg-color-2);
     }
 
     /*スクロールバーの動く部分*/
     &::-webkit-scrollbar-thumb {
-        background-color: #bbb;
+        background-color: var(--font-color-gray-0);
         border-radius: 10px;
-        border: 2px solid #555;
+        border: 2px solid var(--bg-color-2);
         cursor: pointer;
         &:hover {
             background-color: #eee;
@@ -147,52 +150,31 @@
     }
 }
 .c-posts-nav__list {
-    border-bottom: 8px solid rgba($c-font, 0.2);
+    border-bottom: 4px solid var(--border-color-1);
 }
 %post-nav__item {
     padding: 0.8em 1em;
     font-size: 0.85rem;
     line-height: 1.4;
-    border-bottom: 1px solid rgba($c-font, 0.15);
+    border-bottom: 1px solid var(--border-color-1);
     position: relative;
     overflow: hidden;
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: -3em;
-        background-color: rgba($c-font, 0.3);
-        border-radius: 0 3em 3em 0;
-        opacity: 0;
-        pointer-events: none;
-        // transition: 0.3s;
-        transform: scale(0, 1);
-        transform-origin: left;
-    }
+
     &[aria-current='page'] {
-        &::after {
-            opacity: 1;
-            animation: currentnav 0.2s ease-out 0s 1 alternate forwards;
-            // transform: scale(1, 1);
+        background-color: var(--theme-color);
+        color: var(--bg-color-1);
+    }
+    @media (min-width: 767px) {
+        &:not([aria-current='page']):hover {
+            color: var(--font-color-gray-0);
+            background-color: var(--bg-color-2);
         }
     }
     @media (max-width: 767px) {
         font-size: 0.95rem;
     }
 }
-@keyframes currentnav {
-    0% {
-        opacity: 0;
-        transform: scale(0, 1);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1, 1);
-    }
-}
+
 .c-posts-nav__static-page {
     display: block;
     @extend %post-nav__item;
@@ -201,7 +183,7 @@
     display: block;
     font-weight: 600;
     @extend %post-nav__item;
-    border-bottom-width: 8px;
+    border-bottom-width: 4px;
 }
 
 .c-posts-nav__item {
@@ -211,9 +193,6 @@
     align-items: flex-start;
     @extend %post-nav__item;
     padding-right: 2.5em;
-    &:hover {
-        color: #aaa;
-    }
 }
 .c-posts-nav__exercise-icon {
     position: absolute;
@@ -225,7 +204,7 @@
     border: 1px solid;
     padding: 2px;
     border-radius: 4px;
-    transform: translateY(-50%) scale(0.8);
+    transform: translateY(-50%) scale(0.7);
     opacity: 0.5;
 }
 
@@ -234,19 +213,4 @@
     flex: 0 0 2.2em;
     opacity: 0.5;
     position: relative;
-    // padding-left: 0.6em;
-
-    // &::before {
-    //     content: '';
-    //     display: block;
-    //     position: absolute;
-    //     width: 0;
-    //     height: 0;
-    //     border: 3px solid;
-    //     border-radius: 100%;
-    //     background-color: #000;
-    //     left: -0.3em;
-    //     top: 50%;
-    //     transform: translateY(-30%);
-    // }
 }
