@@ -1,8 +1,26 @@
 @charset "utf-8";
-$c-font: #fff;
-$c-bg: #262626;
-$c-bg-light: #444;
-$c-bg-dark: #000;
+
+$c-font: #f0f3f3;
+:root {
+    --font-color: #{$c-font};
+    --font-color-gray-0: #{rgba($c-font, 0.7)};
+    --font-color-gray-1: #{rgba($c-font, 0.5)};
+    --font-color-gray-2: #{rgba($c-font, 0.3)};
+
+    --link-color: #44a2ef;
+    --theme-color: #56d658;
+    --accent-color: #e5de4f;
+
+    --border-color-0: #{rgba($c-font, 0.04)};
+    --border-color-1: #{rgba($c-font, 0.08)};
+    --border-color-2: #{rgba($c-font, 0.12)};
+    --border-color-3: #{rgba($c-font, 0.2)};
+
+    --bg-color-0: #0e1114;
+    --bg-color-1: #151920;
+    --bg-color-2: #1a2228;
+    --bg-color-3: #212a32;
+}
 /* ~~~~~ SP ~~~~~~ */
 @media (max-width: 480px) {
     html {
@@ -12,8 +30,8 @@ $c-bg-dark: #000;
 
 body {
     letter-spacing: 0.05em;
-    background-color: $c-bg;
-    color: $c-font;
+    background-color: var(--bg-color-0);
+    color: var(--font-color);
     line-height: 1.6;
 }
 

@@ -1,0 +1,13 @@
+
+.big-title {
+    text-align: center;
+    font-size: 4rem;
+    border-bottom: 10px solid #f00;
+}
+.block {
+    background-color: #f0f0f0;
+    padding: 2em;
+    border-radius: 30px;
+    margin: 2rem auto;
+    border: 5px solid #ddd;
+}

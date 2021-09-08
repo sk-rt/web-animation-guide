@@ -1,0 +1,38 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.background {
+    position: fixed;
+    left: 0;
+    top:0;
+    right: 0;
+    bottom:0;
+    background: url("../images/bg_green.jpg") repeat-x;
+    background-position: 0px center;
+    background-size: cover;
+}
+.kuri {
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    margin-left: -100px;
+    margin-top: -100px;
+    transition: transform .4s;
+
+}
+.controller {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 11;
+}
+button {
+    font-size: 1.1rem;
+}

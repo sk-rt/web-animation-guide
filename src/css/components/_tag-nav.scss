@@ -4,6 +4,7 @@
     justify-content: flex-start;
     align-items: stretch;
     margin-bottom: 3rem;
+    padding: 3px 0;
     @media (max-width: 767px) {
         flex-wrap: nowrap;
         overflow: auto;
@@ -14,7 +15,7 @@
     display: inline-block;
     font-size: 0.9rem;
     font-weight: 600;
-    color: rgba($c-font, 0.4);
+    color: var(--font-color-gray-2);
     margin-right: 0.7em;
     margin: 0 0.7em 0.7em 0;
     padding: 0.2em 1em;
@@ -23,12 +24,11 @@
     line-height: 1.4;
     transition: 0.4s;
     &.is-current {
-        background-color: #000;
-        border-color: $c-font;
-        color: $c-font;
+        color: var(--font-color);
     }
     /* ~~~~~ SP ~~~~~~ */
     @media (max-width: 767px) {
         font-size: 0.9rem;
+        white-space: nowrap;
     }
 }

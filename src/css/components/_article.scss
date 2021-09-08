@@ -15,8 +15,8 @@
 }
 
 .p-post-examples {
-    background-color: #333;
-    padding: 0.7em;
+    background-color: var(--theme-color);
+    padding: 0.2em;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -26,23 +26,25 @@
     right: 10px;
     bottom: 10px;
     z-index: 10;
-    color: #fff;
+    color: var(--bg-color-0);
 
     p {
         margin: 0;
         font-size: 0.7em;
         margin-left: 1em;
         margin-right: 1em;
+        opacity: 0.7;
     }
 
     a {
         display: inline-block;
-        padding: 0.3em 1.2em;
-        border: 1px solid #ccc;
+        padding: 0.5em 1em;
+        background-color: var(--bg-color-1);
+        color: var(--font-color);
         margin-left: 0.4em;
         margin: 0.3em 0.4em;
         border-radius: 4px;
-        font-weight: 600;
+        font-weight: 500;
     }
 
     /* ~~~~~ SP ~~~~~~ */
@@ -68,7 +70,7 @@
         list-style-type: decimal;
         padding: 3em 5% 1.4em;
         list-style-position: inside;
-        background-color: $c-bg-light;
+        background-color: var(--bg-color-2);
         border-radius: 10px;
         margin: 0 0 4em;
     }
@@ -86,8 +88,8 @@
     }
     h1 {
         padding: 0.4em 0em;
-        border-bottom: 1px solid rgba($c-font, 0.3);
-        font-weight: 700;
+        border-bottom: 1px solid var(--border-color-2);
+        font-weight: 600;
         margin-top: 1.8em;
         margin-bottom: 1em;
         line-height: 1.3;
@@ -95,7 +97,7 @@
 
     h2 {
         padding: 0.4em 0.5em;
-        border-left: 3px solid;
+        border-left: 4px solid var(--border-color-2);
         font-weight: 700;
         margin-top: 2em;
         margin-bottom: 1em;
@@ -105,7 +107,7 @@
         font-weight: 600;
         margin-top: 2em;
         margin-bottom: 1em;
-        background-color: $c-bg-light;
+        background-color: var(--bg-color-2);
         padding: 0.4em 0.8em;
         border-radius: 8px;
         font-size: 1.25em;
@@ -127,18 +129,21 @@
     }
 
     a {
-        color: rgb(67, 231, 223);
+        color: var(--link-color);
         text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     hr {
         margin: 2em 0;
         height: 1px;
-        background-color: rgba(#fff, 0.2);
+        background-color: --border-color-2;
     }
 
     table {
-        border-top: 2px solid rgba(#fff, 0.2);
+        border-top: 2px solid --border-color-2;
         [align='center'] {
             text-align: center;
         }
@@ -165,7 +170,7 @@
     }
 
     em {
-        color: #fc0;
+        color: var(--accent-color);
         font-style: normal;
     }
 
@@ -185,9 +190,10 @@
         // border-left: 4px solid #666;
         margin-top: 1.5em;
         margin-bottom: 1.5em;
-        padding: 0.2em 1em 0.2em 2.5em;
+        padding: 0.7em 1em 0.6em 2.5em;
         margin-left: 0;
-        background-color: #000;
+        // background-color: #000;
+        border: 1px solid var(--border-color-2);
         margin-right: 0;
         border-radius: 8px;
         position: relative;
@@ -205,12 +211,24 @@
             content: '“';
             position: absolute;
             font-family: serif;
-            font-size: 3.3rem;
-            left: 0;
-            top: 0em;
+            font-size: 4rem;
+            left: 0.1em;
+            top: -0.2em;
             line-height: 1;
             display: block;
-            opacity: 0.6;
+            color: var(--font-color-gray-2);
+            z-index: 0;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            font-size: 4rem;
+            left: 0.1em;
+            top: -1px;
+            height: 2px;
+            width: 0.5em;
+            background-color: var(--bg-color-0);
+            z-index: 0;
         }
     }
 
@@ -219,8 +237,7 @@
     }
 
     small code {
-        background-color: #333;
-        color: #fff;
+        background-color: var(--bg-color-3);
     }
 
     strong code {
@@ -240,7 +257,7 @@
     justify-content: space-between;
     align-items: stretch;
     padding: 0;
-    border-top: 1px solid rgba($c-font, 0.2);
+    border-top: 1px solid var(--border-color-1);
     margin: 0;
     margin-top: 5rem;
 
@@ -277,7 +294,7 @@
     @media (max-width: 767px) {
         display: block;
         width: auto;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid var(--border-color-1);
 
         a {
             padding: 1em 0;

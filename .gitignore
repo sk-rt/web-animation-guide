@@ -56,7 +56,7 @@ typings/
 
 # gatsby files
 .cache/
-public
+/public
 
 # Mac files
 .DS_Store
@@ -73,3 +73,7 @@ __trash
 id/
 
 _assets/
+
+
+# exercises
+exercises/public/*.zip

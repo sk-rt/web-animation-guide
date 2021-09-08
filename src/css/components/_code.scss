@@ -9,41 +9,44 @@
         position: absolute;
         left: 0;
         top: 0;
-        background-color: rgba(#fff, 0.3);
+        background-color: var(--bg-color-3);
         padding: 0 1em;
         color: #fff;
-        font-weight: 600;
+        // font-weight: 600;
         font-size: 0.8em;
         border-radius: 8px 0 8px 0;
     }
 
     code[class*='language-'],
     pre[class*='language-'] {
-        font-size: 1rem;
-        font-family: 'Source Sans Pro', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier,
-            monospace;
+        // font-family: 'Source Sans Pro', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier,
+        //     monospace;
         line-height: 1.5;
         border: none;
+        font-size: 0.9rem;
     }
 
     pre[class*='language-'] {
         padding: 2rem;
         border-radius: 8px;
         padding-top: 3rem;
-        background-color: $c-bg-dark;
+        font-size: 0.9rem;
+        background-color: var(--bg-color-1);
+        border: 1px solid var(--border-color-1);
     }
 
-    ::selection {
-        background-color: rgba(#ccc, 0.3);
+    * ::selection {
+        background-color: rgba(rgb(224, 30, 30), 0.3);
     }
 }
-
+// inlineコード
 :not(pre) > code[class*='language-'] {
-    background-color: $c-bg-light;
+    background-color: var(--bg-color-2);
     border: none;
     padding: 0.1em 0.4em;
     box-shadow: none;
     font-size: 1em;
-    color: $c-font;
+    color: var(--font-color);
     margin: 0 0.2em;
+    border: 1px solid var(--border-color-1);
 }
