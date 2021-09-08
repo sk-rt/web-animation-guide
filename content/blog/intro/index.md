@@ -14,13 +14,6 @@ exercises: [{ file: "", title: "" }]
 主にユーザービリティを向上させるための説明的なインタラクション。  
 **マイクロインタラクション**
 
-<iframe src="https://codesandbox.io/embed/eloquent-solomon-0teu3?fontsize=14&hidenavigation=1&theme=dark&view=preview"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="eloquent-solomon-0teu3"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe>
-
 - (例) ON/OFF ボタンのアクション
 
   [<img src="https://cdn.dribbble.com/users/108183/screenshots/5429846/switcher_xliv.gif" width="300px">
@@ -52,31 +45,34 @@ exercises: [{ file: "", title: "" }]
 
 [<img alt="F R A N C O fade scroll ux ui animated transition animation gif motion hiking camping illustration mountain" src="https://cdn.dribbble.com/users/1846841/screenshots/4301291/f_r_a_n_c_o.gif" width="450px">](https://dribbble.com/shots/4301291-F-R-A-N-C-O?utm_source=Clipboard_Shot&utm_campaign=zakeklund&utm_content=F%20R%20A%20N%20C%20O&utm_medium=Social_Share)
 
-# アニメーションの実装
+# アニメーションの実装方法
 
 ## CSS アニメーション
 
 `transition` や `animation` プロパティを使って、比較的簡単に実装できるが、複雑なアニメーションは難しい。  
 また、`:hover`,`:active` などを除いて、**ユーザーのアクションを取得できない**。（マウスイベント、タッチイベント、スクロールイベント、フォームイベントなど）
 
+<iframe width="100%" height="300" src="//jsfiddle.net/sk_rt/afvyxp1t/embedded/result,html,css,/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
 ## JavaScript を使ったアニメーション
 
-JavaScript を使って要素を変更することで行う。  
-ユーザーインタラクションや環境などを取得してインタラクティブなアニメーションが可能。
+JavaScript を使って要素の style を変更や canvas 要素に描画することで行う。  
+クリックやスクロールなどのユーザーインタラクションや環境などを取得して**インタラクティブなアニメーション**が可能。
 
-また、全て自分で実装しなくても、目的に応じた豊富な JavaScript ライブラリがある。
+また、目的に応じた豊富な JavaScript ライブラリがある。
+
+<iframe width="100%" height="300" src="//jsfiddle.net/sk_rt/q35f8z6o/embedded/result,html,js,css/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 # アニメーションの手法やライブラリ
 
-主に以下の手法を織り交ぜて
-
 ### DOM アニメーション
 
-DOM (Html の要素) の style を連続して変更して行うアニメーション。  
-UI に対するアニメーションに有効。
+DOM (HTML の要素) の style を連続して変更して行うアニメーション。  
+UI に対するアニメーションに有効。  
+_＊今回はこの手法をメインに進めます。_
 
 > **〈主な DOM アニメーション系ライブラリ〉**  
-> TweenMax,
+> GSAP,
 > anime.js,
 > kute.js,
 > など
@@ -98,7 +94,7 @@ DOM(HTML 要素)を変更するのではなく `<canvas>` 要素に JavaScript �
 ### SVG アニメーション
 
 [SVG](https://webkikaku.co.jp/blog/webdesign/svg_for_webdesigner/) 要素に対して行うアニメーション。  
-SVG が HTML/CSS と近いため、比較的わかりやすく、CSS のみでもアニメーション可。  
+SVG が HTML 近い構造のため、比較的わかりやすく、CSS のみでもアニメーション可。  
 ロゴやイラストなど、パスでできたアートワークと親和性が高い。(illustrator から書き出しできる)
 
 - [SVG アニメーションの作り方まとめ - ics.media](https://ics.media/entry/15970/)
@@ -112,4 +108,4 @@ SVG が HTML/CSS と近いため、比較的わかりやすく、CSS のみで�
 
 ### video やアニメ Gif など
 
-`<video>`タグで動画が埋め込める。JavaScript で操作できる(シークや再生・ストップなど)ので工夫次第では面白いものができるかも。
+`<video>`タグで動画が埋め込める。また、JavaScript で操作できる(シークや再生・ストップなど)ので工夫次第では面白いものができるかも。
