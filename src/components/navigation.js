@@ -83,7 +83,7 @@ export const navQuery = graphql`
       edges {
         node {
           id
-          excerpt
+
           fields {
             slug
           }
