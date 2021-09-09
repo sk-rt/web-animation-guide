@@ -19,9 +19,9 @@ class BlogPostTemplate extends React.Component {
         ))
       : '';
     //サンプルファイル
-    const exercisesListBlock = (exercises => {
+    const exercisesListBlock = ((exercises) => {
       if (!exercises || exercises.length === 0) return;
-      const _exercises = exercises.filter(ex => {
+      const _exercises = exercises.filter((ex) => {
         return ex.file && ex.title;
       });
       if (_exercises.length === 0) return;
@@ -40,7 +40,7 @@ class BlogPostTemplate extends React.Component {
     })(post.frontmatter.exercises);
     return (
       <Layout location={this.props.location} title={siteTitle} current={post}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} lang="ja" />
+        <SEO title={post.frontmatter.title} description={post.frontmatter.excerpt} lang="ja" />
         <article>
           <header className="p-article__header">
             <h1 className="p-article__title">{post.frontmatter.title}</h1>
@@ -50,7 +50,7 @@ class BlogPostTemplate extends React.Component {
           <div
             className="p-article__body"
             dangerouslySetInnerHTML={{ __html: post.html }}
-            ref={articleBody => {
+            ref={(articleBody) => {
               fixExternalLink(articleBody);
             }}
           />
@@ -88,7 +88,6 @@ export const pageQuery = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 160)
       html
       frontmatter {
         title

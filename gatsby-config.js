@@ -77,12 +77,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [require('autoprefixer')()],
-        precision: 8, // SASS default: 5
-      },
-    },
   ],
 };
