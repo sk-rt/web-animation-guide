@@ -5,6 +5,7 @@ excerpt: " ユーザーの操作や状態の変化などを検知する。"
 tags: ["DOM"]
 featuredImage: ""
 exercises: [{ file: "dom-event.zip", title: "clickイベント演習" }]
+draft: true
 ---
 
 # イベントとは
@@ -63,7 +64,7 @@ alertButton.addEventListener("click", showGreeting); // 関数名には `()`を�
 ```js
 const alertButton = document.querySelector(".alert-button");
 
-alertButton.addEventListener("click", function() {
+alertButton.addEventListener("click", function () {
   alert("こんにちは");
 });
 ```
@@ -167,7 +168,7 @@ function smoothScroll(event) {
   const targetID = event.target.getAttribute("href"); // href属性の値を取得
   const scrollToElement = document.querySelector(targetID);
   scrollToElement.scrollIntoView({
-    behavior: "smooth"
+    behavior: "smooth",
   });
 }
 

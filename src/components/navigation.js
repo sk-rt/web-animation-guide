@@ -79,7 +79,10 @@ export default Navigation;
 
 export const navQuery = graphql`
   query navQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: ASC }
+      filter: { fields: { draft: { eq: false } } }
+    ) {
       edges {
         node {
           id

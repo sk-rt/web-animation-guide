@@ -5,6 +5,7 @@ excerpt: " querySelector() / querySelectorAll() と要素の操作"
 tags: ["DOM"]
 featuredImage: ""
 exercises: [{ file: "dom-basic.zip", title: "DOMの操作基礎" }]
+draft: true
 ---
 
 # DOM を取得・操作できるまで
@@ -15,7 +16,7 @@ DOM を取得・操作する時は以下の`DOMContentLoaded`イベントの中�
 ＊現時点ではお約束の様なものとしておく。 イベントや `addEventListener()`については後述する。
 
 ```js
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // この中に書く
 });
 ```

@@ -5,6 +5,7 @@ excerpt: " setTimeout() / setInterval() を使ったアニメーション"
 tags: ["応用"]
 featuredImage: ""
 exercises: [{ file: "timer-animation.zip", title: "タイマーアニメーション演習" }]
+draft: true
 ---
 
 # タイマー処理

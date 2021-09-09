@@ -5,6 +5,7 @@ excerpt: "ブラウザ操作の基本となるwindow / documentオブジェク�
 tags: ["DOM"]
 featuredImage: ""
 exercises: []
+draft: true
 ---
 
 # DOM とは

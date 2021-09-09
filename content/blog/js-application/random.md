@@ -5,6 +5,7 @@ excerpt: "Math.random()を使った処理"
 tags: ["応用"]
 featuredImage: ""
 exercises: [{ file: "random.zip", title: "ランダム演習" }]
+draft: true
 ---
 
 # ランダム(乱数)
