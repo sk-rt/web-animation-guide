@@ -1,18 +1,20 @@
 ---
 title: 変数と要素の取得
-date: "2019-02-01"
-excerpt: "変数宣言とHTML要素の取得"
+date: "2021-02-02"
+excerpt: "const/letでの変数宣言とquerySelector()でHTML要素の取得・操作"
 tags: ["基礎"]
 featuredImage: ""
-exercises: []
+exercises: [{ file: "js-dom-basic.zip", title: "要素の取得と操作" }]
 draft: false
 ---
 
 # 変数宣言
 
-繰り返し使う値に名前をつけることができる。  
-JavaScript では `var` , `let` , `const` の 3 種類が使用可能。  
-`var` は古い宣言方法なので本サイトでは `let` と `const`を使用する。
+![変数](./js-variable.png?v=4)
+
+繰り返し使う値に名前をつけて保存しておくことができる。  
+JavaScript では `var` , `const`, `let` の 3 種類が使用可能。  
+`var` は古い宣言方法なので本サイトでは `const`と `let`を使用する。
 
 ```js
 // [変数定義]
@@ -116,4 +118,62 @@ const mainTitle = document.querySelector(".main-title");
 
 // idが `header` の要素を取得する。
 const header = document.querySelector("#header");
+```
+
+# 要素の操作、データの取得
+
+querySelector で取得した要素は `Elementオブジェクト`になっている。  
+タグの種類などによって違いはあるが、同じ様なプロパティになっている。  
+＊参考: [Element](https://developer.mozilla.org/ja/docs/Web/API/Element)
+
+よく使う操作例を以下に紹介。
+
+## class 名の追加・削除
+
+`element.classList` を使って element に class を追加・削除する。
+
+```js
+const myElement = document.querySelector(".my-element");
+
+// 要素に `my-class` classを追加
+myElement.classList.add("my-class");
+// ⇨ <div class="my-element my-class">
+
+// 要素に `my-class` classを削除
+myElement.classList.remove("my-class");
+// ⇨ <div class="my-element">
+```
+
+## style の変更
+
+`element.style` element の style を変更する。  
+<small>＊変更した style は CSS で定義した style より優先される。</small>
+
+```js
+const myElement = document.querySelector(".my-element");
+
+// 文字カラーを変更
+myElement.style.color = "#FF0000";
+
+// 文字サイズを変更
+myElement.style.fontSize = "20px";
+
+// ⇨ <div class="my-element" style="color:#FF000; font-size:20px;">
+```
+
+＊ハイフンが入った CSS プロパティはハイフンを取って直後の文字を大文字に変更する。  
+ex. `background-color` => `backgroundColor`
+
+## 中身を取得・変更
+
+`element.innerHTML` element の 中身を取得・変更する。
+
+```js
+const myElement = document.querySelector(".my-element");
+
+//  中身を取得して `content` に代入
+const content = myElement.innerHTML;
+
+// 中身を置き換え
+myElement.innerHTML = "中身です。";
 ```
