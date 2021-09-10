@@ -6,7 +6,7 @@ import SEO from '../components/seo';
 
 class BlogIndex extends React.Component {
   state = {
-    currentTag: ''
+    currentTag: '',
   };
 
   componentWillMount() {
@@ -15,7 +15,7 @@ class BlogIndex extends React.Component {
     this.tags = posts
       .flatMap(({ node }) => node.frontmatter.tags)
       .filter((x, i, self) => self.indexOf(x) === i)
-      .map(tag => encodeURI(tag));
+      .map((tag) => encodeURI(tag));
     if (
       location.hash &&
       this.tags.includes(location.hash.slice(1)) &&
@@ -71,7 +71,7 @@ class BlogIndex extends React.Component {
           const title = node.frontmatter.title || node.fields.slug;
           if (
             this.state.currentTag &&
-            !node.frontmatter.tags.map(tag => encodeURI(tag)).includes(this.state.currentTag)
+            !node.frontmatter.tags.map((tag) => encodeURI(tag)).includes(this.state.currentTag)
           ) {
             return false;
           }
@@ -86,7 +86,7 @@ class BlogIndex extends React.Component {
                   <div
                     className="p-post-item__featured-image"
                     style={{
-                      backgroundImage: `url(/featured/${node.frontmatter.featuredImage})`
+                      backgroundImage: `url(/featured/${node.frontmatter.featuredImage})`,
                     }}
                   />
                 ) : (
@@ -118,10 +118,12 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: ASC }
+      filter: { fields: { draft: { eq: false } } }
+    ) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }

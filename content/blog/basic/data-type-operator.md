@@ -1,15 +1,16 @@
 ---
-title: JS 基礎 - 型と演算子
-date: "2019-02-02"
+title: データ型と演算子
+date: "2021-02-01"
 excerpt: "データ型や演算子について"
 tags: ["基礎"]
 featuredImage: ""
-exercises: [{ file: "js-type.zip", title: "変数・演算子演習" }]
+exercises: [{ file: "", title: "" }]
+draft: true
 ---
 
 # データ型
 
-前項では変数には全て*文字列*を代入していたが JavaScript には文字列の他にもデータ型がある。
+JavaScript で扱う値には文字列や数値などの`データ型`がある。
 
 - 文字列
 - 数値
@@ -17,6 +18,7 @@ exercises: [{ file: "js-type.zip", title: "変数・演算子演習" }]
 - null / undefined
 - 配列
 - オブジェクト
+- etc.
 
 ## 文字列型(String)
 
@@ -49,15 +51,21 @@ const isMale = false;
 
 ## null / undefined
 
-`null` は値が存在しないことを表す。  
-`undefined` は変数が定義されていない、という意味。
+`null` は値がないことを表す。  
+`undefined` は変数などが定義されていない、という意味。
 
 ```js
-let myAge; // 変数宣言だけだとnullが入る。
+// 変数宣言だけで代入をしないとnullが入る。
+let myAge;
 console.log(myAge); // ⬅︎ null
 
+// 存在しない変数名などにアクセスするとundefinedになる。
 const myName = "Taro";
 console.log(myNameee); // ⬅︎ undefined
+
+// querySelector()などは指定した要素が存在しない場合は nullを返す。
+const noElement = document.querySelector(".no-element");
+console.log(noElement); // ⬅︎ null
 ```
 
 ## 配列型(Array)
@@ -89,7 +97,7 @@ const myFriendsNumber = myFriends.length;
 console.log(myFriendsNumber); // 3
 ```
 
-また、値にはあらゆる型が指定できる。
+また、配列の値にはあらゆる型が指定できる。
 
 ```js
 // 数値の配列
@@ -107,7 +115,7 @@ console.log(kanaCharacters[1][3]); // ケ
 ## オブジェクト型(Object)
 
 オブジェクトは `{}` の中に `key: value` で値を`,`区切りで指定する。  
-各 `key: value` をそのオブジェクトの**_プロパティ_**という。
+各 `key: value` をそのオブジェクトの*プロパティ*という。
 
 ```js
 const myProfile = {
@@ -136,6 +144,31 @@ console.log(myGender); // 男
 // 変数名["key"]でもメンバーにアクセスできる。
 console.log(myProfile["friends"]); // ["Tanaka", "Yamada", "Saito"]
 ```
+
+> #### JavaScript でのオブジェクト
+>
+> window / document を筆頭に JavaScript ではオブジェクトが頻出する。  
+> 例えば querySelector() で取得した element もオブジェクトで、element.style や element.classList はそのプロパティ。
+>
+> ```js
+> // Elementオブジェクトのイメージ
+> element = {
+>     classList: {
+>         add: Function,
+>         remove: Function,
+>     },
+>     style: {
+>         color: '#00000',
+>         fontSize: '15px',
+>         ...
+>     },
+>     innerHTML: '<div>xxxx</div>'
+>     ....
+> }
+> // ドット`.` でプロパティにアクセス
+> element.style.color = "#FF0000";
+>
+> ```
 
 # 演算子
 
@@ -179,8 +212,8 @@ console.log(yourAge); // 18
 掛け算(乗算) `*`
 
 ```js
-const ourAge = 20 * 50;
-console.log(ourAge); // 1000
+const minutesOfYear = 365 * 24 * 60;
+console.log(minutesOfYear); // 525600
 ```
 
 ## 除算演算子（/）
@@ -214,6 +247,7 @@ console.log(donation); // 1
 ```js
 const myAge = 20;
 const youreAge = 21;
+console.log(myAge === 20); // true
 console.log(myAge === youreAge); // false
 console.log(myAge !== youreAge); // true
 ```

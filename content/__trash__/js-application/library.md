@@ -5,6 +5,7 @@ excerpt: "外部ライブラリの使用方法"
 tags: ["応用"]
 featuredImage: ""
 exercises: [{ title: "アニメーションライブラリ演習", file: "animation-by-library.zip" }]
+draft: true
 ---
 
 # JavaScript ライブラリとは？
@@ -60,7 +61,7 @@ anime({
   left: "240px",
   backgroundColor: "#FFF",
   duration: 3000,
-  easing: "easeInOutQuad"
+  easing: "easeInOutQuad",
 });
 ```
 

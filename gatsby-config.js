@@ -1,9 +1,10 @@
+console.log({ publishDraft: process.env.NODE_ENV !== 'production' });
 module.exports = {
   siteMetadata: {
     title: `Motion Planning`,
     author: `R Sakai`,
     description: `Motion Planning Guide`,
-    siteUrl: `https://motion-p.netlify.com`,
+    siteUrl: `https://motion-p.netlify.app`,
   },
   plugins: [
     {
@@ -13,13 +14,12 @@ module.exports = {
         name: `blog`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/content/assets`,
-    //     name: `assets`
-    //   }
-    // },
+    {
+      resolve: 'gatsby-plugin-draft',
+      options: {
+        publishDraft: process.env.NODE_ENV !== 'production',
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -28,11 +28,14 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1080,
+              backgroundColor: 'transparent',
+              disableBgImageOnAlpha: true,
             },
           },
-          {
-            resolve: `gatsby-remark-attr`,
-          },
+          //
+          //   {
+          //     resolve: `gatsby-remark-attr`,
+          //   },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
@@ -77,12 +80,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [require('autoprefixer')()],
-        precision: 8, // SASS default: 5
-      },
-    },
   ],
 };

@@ -1,5 +1,6 @@
+$nav-speed: 0.2s;
 .page-container {
-    transition: 0.3s ease-in-out;
+    transition: padding $nav-speed ease-in-out;
     position: relative;
     &.is-show-drawer {
         padding-left: 320px;
@@ -18,7 +19,7 @@
     border-right: 1px solid var(--border-color-1);
     width: 320px;
     transform: translate(-100%);
-    transition: 0.3s ease-in-out;
+    transition: $nav-speed ease-in-out;
     box-shadow: 5px 5px 60px rgba(0, 0, 0, 0);
 
     &.is-show {
@@ -96,7 +97,6 @@
             height: 4px;
             margin-top: -2px;
             transition-delay: 0.1s;
-            // background-color: #fff;
         }
 
         span {
@@ -108,9 +108,7 @@
         &::before {
             margin-left: -2px;
             width: 14px;
-            // transition-delay: .2s;
         }
-
         &::before {
             transform: translateY(-1px) rotate(-45deg);
         }

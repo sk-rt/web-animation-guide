@@ -19,9 +19,27 @@ class Link extends React.Component {
           <div className="p-article__body">
             <section className="p-document-section">
               <h2>JavaScript Primer </h2>
-              <p>ECMAScript 2019時代のJavaScript入門書</p>
+              <p>主にJavaScriptの文法などが解説されている入門書。</p>
               <a href="https://jsprimer.net/" target="_blank" ref="noopener noreferer">
                 jsprimer.net
+              </a>
+            </section>
+            <section className="p-document-section">
+              <h2>JavaScript.INFO</h2>
+              <p>文法に加え、ブラウザAPI（DOM）などの解説、ユースケースなど。</p>
+              <a href="https://ja.javascript.info/" target="_blank" ref="noopener noreferer">
+                ja.javascript.info
+              </a>
+            </section>
+            <section className="p-document-section">
+              <h2>MDN </h2>
+              <p>FirefoxのMozillaが作っている一番詳細な情報が載っている資料</p>
+              <a
+                href="https://developer.mozilla.org/ja/docs/Web/JavaScript"
+                target="_blank"
+                ref="noopener noreferer"
+              >
+                developer.mozilla.org
               </a>
             </section>
           </div>
