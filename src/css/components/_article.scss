@@ -136,6 +136,9 @@
             text-decoration: none;
         }
     }
+    a.anchor path {
+        fill: var(--link-color);
+    }
 
     hr {
         margin: 2em 0;

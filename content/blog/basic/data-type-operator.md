@@ -1,6 +1,6 @@
 ---
 title: データ型と演算子
-date: "2021-02-01"
+date: "2021-02-03"
 excerpt: "データ型や演算子について"
 tags: ["基礎"]
 featuredImage: ""

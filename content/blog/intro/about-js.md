@@ -45,14 +45,16 @@ alert("Hello, JS");
 <head>
   ...
   <!-- <head>内でmain.jsを読みこみ -->
-  <script src="./js/main.js"></script>
+  <script src="./js/main.js" defer></script>
   ...
 </head>
 ```
 
+＊script タグに `defer 属性`をつけること。理由は[後述](/basic/variable-queryselector/#%E8%A6%81%E7%B4%A0%E3%82%92%E5%8F%96%E5%BE%97%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84)する
+
 ## HTML に直接書く
 
-外部ファイルとして保存せずに HTML に直接 script を書くこともできる。
+外部ファイルを読み込まずに インラインで script を書くこともできる。
 
 ```html
 <head>

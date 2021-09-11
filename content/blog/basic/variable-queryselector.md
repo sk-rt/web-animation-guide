@@ -1,5 +1,5 @@
 ---
-title: 変数と要素の取得
+title: 変数と要素の取得・操作
 date: "2021-02-02"
 excerpt: "const/letでの変数宣言とquerySelector()でHTML要素の取得・操作"
 tags: ["基礎"]
@@ -83,21 +83,7 @@ const my-name = "太郎"; // 🙅‍♂️ ハイフン、+などの記号が入
 
 # 要素の取得
 
-表示されている HTML 要素（タグ）を取得する。
-
-## HTML を取得・操作できるまで
-
-ページ読み込んだ瞬間は DOM ツリー の準備ができていないので要素を取得できない。  
-DOM を取得・操作する時は以下の`DOMContentLoaded`イベントの中に書く様にする。
-
-＊現時点ではお約束の様なものとしておく。 イベントや `addEventListener()`については後述する。
-
-```js
-document.addEventListener("DOMContentLoaded", function () {
-  // DOM取得などの処理はこの中に書く
-  const example = document.querySelector(".example");
-});
-```
+表示されている HTML 要素を取得する。
 
 ## 単一要素の取得 `querySelector()`
 
@@ -120,10 +106,10 @@ const mainTitle = document.querySelector(".main-title");
 const header = document.querySelector("#header");
 ```
 
-# 要素の操作、データの取得
+# 要素の操作、プロパティの取得
 
-querySelector で取得した要素は `Elementオブジェクト`になっている。  
-タグの種類などによって違いはあるが、同じ様なプロパティになっている。  
+querySelector で取得した要素は `Element`[オブジェクト](/basic/data-type-operator/#%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E5%9E%8Bobject)になっている。  
+＊詳細なプロパティはタグの種類などによって違う。  
 ＊参考: [Element](https://developer.mozilla.org/ja/docs/Web/API/Element)
 
 よく使う操作例を以下に紹介。
@@ -176,4 +162,35 @@ const content = myElement.innerHTML;
 
 // 中身を置き換え
 myElement.innerHTML = "中身です。";
+```
+
+# 要素を取得できない？
+
+ページ読み込んだ瞬間は DOM ツリー の準備ができていないので要素の取得ができない。  
+なので*次のいずれか*で構築を待つ必要がある。
+
+### A. script タグの `defer` 属性
+
+script の読み込みタグに`defer`属性をつけると、DOM 構築後に読み込んだ script を実行してくれる。  
+＊ただしインラインでの JavaScript は使用不可。
+
+```html
+<script src="./js/main.js" defer></script>
+
+<!-- ↓↓↓ これは不可 ❌ -->
+<script defer>
+  const myElement = document.querySelector(".my-element"); // → null
+</script>
+```
+
+### B. `DOMContentLoaded` イベント
+
+`DOMContentLoaded` イベントを使うと DOM の構築完了後に処理を実行できる。  
+＊ イベントや関数、 `addEventListener()`、については後述する。
+
+```js
+document.addEventListener("DOMContentLoaded", function () {
+  // DOM取得などの処理はこの中に書く
+  const example = document.querySelector(".example");
+});
 ```
