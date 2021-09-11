@@ -5,7 +5,7 @@ excerpt: "データ型や演算子について"
 tags: ["基礎"]
 featuredImage: ""
 exercises: [{ file: "", title: "" }]
-draft: true
+draft: false
 ---
 
 # データ型
