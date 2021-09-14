@@ -115,7 +115,7 @@ JS で Web 開発するのには必須なので _作業中は常に開発者ツ�
 # DOM とは
 
 _DOM（Document Object Model）_ は JavaScript で html を操作する仕組み。  
-ブラウザの `window` / `document` オブジェクトを基準に操作できる。
+ブラウザの `window` / `document` [オブジェクト](/basic/data-type-operator/#%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E5%9E%8Bobject)を基準に操作できる。
 
 ![DOMとは](./js-overview.png)
 
