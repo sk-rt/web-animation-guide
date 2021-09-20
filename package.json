@@ -64,7 +64,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "lint:fix": "eslint src/**/*.js --fix",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "exercise-dev": "yarn --cwd ./exercises/ dev",
+    "exercise-dist": "yarn --cwd ./exercises/ dist"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

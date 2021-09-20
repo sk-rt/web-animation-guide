@@ -1,0 +1,42 @@
+img {
+    max-width: 100%;
+}
+.container {
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 4rem;
+}
+.my-dog {
+    width: 400px;
+    margin: auto;
+    position: relative;
+}
+.dog-sitting {
+    display: block;
+    opacity: 1;
+    transition: transform 0.5s;
+    transform: rotateY(0);
+}
+.dog-spinning {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.is-spinning .dog-sitting {
+    opacity: 0;
+    transform: rotateY(-360deg);
+}
+.is-spinning .dog-spinning {
+    opacity: 1;
+    transition: transform 0.5s;
+    transform: rotateY(-360deg);
+}
+button {
+    font-size: 1.4rem;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 0.3em 1.5em;
+    border-radius: 2em;
+}

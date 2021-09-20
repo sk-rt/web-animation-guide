@@ -5,10 +5,9 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "start": "npm run server & npm run copy:watch",
-        "server": "browser-sync start --config bs-config.js",
-        "copy": "cpx 'public/**/*.zip' ../static/exercises/",
-        "copy:watch": "npm run copy -- --watch"
+        "dev": "npm run serve",
+        "serve": "browser-sync start --config bs-config.js",
+        "dist": "cpx 'public/**/*.zip' ../static/exercises/"
     },
     "devDependencies": {
         "browser-sync": "^2.27.5",

@@ -57,15 +57,15 @@ const isMale = false;
 ```js
 // 変数宣言だけで代入をしないとnullが入る。
 let myAge;
-console.log(myAge); // ⬅︎ null
+console.log(myAge); // → null
 
 // 存在しない変数名などにアクセスするとundefinedになる。
 const myName = "Taro";
-console.log(myNameee); // ⬅︎ undefined
+console.log(myNameee); // → undefined
 
 // querySelector()などは指定した要素が存在しない場合は nullを返す。
 const noElement = document.querySelector(".no-element");
-console.log(noElement); // ⬅︎ null
+console.log(noElement); // → null
 ```
 
 ## 配列型(Array)
@@ -77,9 +77,10 @@ console.log(noElement); // ⬅︎ null
 const myFriends = ["Tanaka", "Suzuki", "Yamada", "Saito"];
 ```
 
-また、配列は`0` から始まるインデックス(順番)で値を保存している。  
-各値へアクセスするには `変数名[順番]` で対応した値を参照できる。  
-値の数を調べるには `変数名.length` で参照できる。
+配列は`0` から始まる*インデックス*(順番)で値を保存している。  
+各値へアクセスするには `変数名[インデックス]` で対応した値を参照できる。
+
+また、配列の要素数は `変数名.length` で取得できる。
 
 ```js
 const myFriends = [
@@ -90,11 +91,12 @@ const myFriends = [
 ];
 // 0番目の値を取得
 const myBestFriend = myFriends[0];
-console.log(myBestFriend); // Tanaka
+console.log(myBestFriend); // → Tanaka
+console.log(myFriends[1]); // → Suzuki
 
 // 配列の数
 const myFriendsNumber = myFriends.length;
-console.log(myFriendsNumber); // 3
+console.log(myFriendsNumber); // →　4
 ```
 
 また、配列の値にはあらゆる型が指定できる。
@@ -150,12 +152,15 @@ console.log(myProfile["friends"]); // ["Tanaka", "Yamada", "Saito"]
 > window / document を筆頭に JavaScript ではオブジェクトが頻出する。  
 > 例えば querySelector() で取得した element もオブジェクトで、element.style や element.classList はそのプロパティ。
 >
+> また、文字列や数値もオブジェクトの様に振る舞う。  
+> 参考: [https://qiita.com/hcr1s/items/172ba167ba44a35c2a45](https://qiita.com/hcr1s/items/172ba167ba44a35c2a45)
+>
 > ```js
 > // Elementオブジェクトのイメージ
 > element = {
 >     classList: {
->         add: Function,
->         remove: Function,
+>         add: function(className){ ... },
+>         remove: function(className){ ... },
 >     },
 >     style: {
 >         color: '#00000',
@@ -176,7 +181,7 @@ console.log(myProfile["friends"]); // ["Tanaka", "Yamada", "Saito"]
 
 ## プラス演算子（+）
 
-数値の足し算を行う。
+数値、または文字列の足し算を行う。
 
 ```js
 let myAge = 21 + 1;
@@ -200,7 +205,7 @@ console.log(myAge); //2410歳
 
 ## マイナス演算子（-）
 
-引き算(減算) `-`
+数値の引き算(減算) `-`
 
 ```js
 const yourAge = 30 - 12;
@@ -209,7 +214,7 @@ console.log(yourAge); // 18
 
 ## 乗算演算子（\*）
 
-掛け算(乗算) `*`
+数値の掛け算(乗算) `*`
 
 ```js
 const minutesOfYear = 365 * 24 * 60;
@@ -218,7 +223,7 @@ console.log(minutesOfYear); // 525600
 
 ## 除算演算子（/）
 
-割り算（除算）`/`
+数値の割り算（除算）`/`
 
 ```js
 const myMonney = 10000 / 3;
@@ -227,7 +232,7 @@ console.log(myMonney); // 3333.333...
 
 ## 剰余演算子（%）
 
-割り算のあまり `%`
+数値の割り算のあまり `%`
 
 ```js
 const donation = 10000 % 3;
