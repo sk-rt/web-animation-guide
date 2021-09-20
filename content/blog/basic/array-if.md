@@ -5,7 +5,7 @@ excerpt: "if文や反復処理について"
 tags: ["基礎"]
 featuredImage: ""
 exercises: [{ file: "", title: "" }]
-draft: true
+draft: false
 ---
 
 # 条件分岐 (if / else 文)
@@ -20,6 +20,9 @@ if (条件式) {
 ```
 
 ## 単体の値 （ truthy / falsy） での条件式
+
+条件式の中は値によって true/false のどちらかに変換される。  
+Boolean 以外の値も指定できる。
 
 ```js
 const isMinor = true;
@@ -46,8 +49,11 @@ if ("") {
 }
 ```
 
-どんな値が true/false になるかは以下を参照  
-[条件分岐 · JavaScript Primer](https://jsprimer.net/basic/condition/)
+どんな値が true/false になるかは以下を参照
+
+- [条件分岐 · JavaScript Primer](https://jsprimer.net/basic/condition/)
+- [Falsy](https://developer.mozilla.org/ja/docs/Glossary/Falsy)
+- [Truthy](https://developer.mozilla.org/ja/docs/Glossary/Falsy)
 
 ## [比較演算子](/basic/data-type-operator/#%E6%AF%94%E8%BC%83%E6%BC%94%E7%AE%97%E5%AD%90)を使った条件式
 
@@ -64,6 +70,11 @@ const myFavoridFood = "寿司";
 if (myFavoridFood === "カレー") {
   // ここは実行されない
   console.log("あなたはカレー好きです。");
+}
+
+if (myFavoridFood !== "カレー") {
+  // ここは実行される
+  console.log("あなたはカレーが好きでは無いです。");
 }
 ```
 
