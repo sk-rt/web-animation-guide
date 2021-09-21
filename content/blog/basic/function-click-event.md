@@ -180,7 +180,7 @@ alertButton.addEventListener("click", function () {
 });
 ```
 
-<iframe width="100%" height="300" src="//jsfiddle.net/sk_rt/s7o0aj82/46/embedded/result,js,css,html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/sk_rt/s7o0aj82/embedded/result,js,css,html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 > #### イベントオブジェクト
 >
