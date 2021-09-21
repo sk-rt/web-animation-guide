@@ -10,7 +10,7 @@ draft: false
 
 # 関数とは
 
-![関数](./js-function.png)
+![関数](./js-function.png?v=2)
 
 **ある一連の手続きを一つの処理としてまとめるもの。**  
 同じ処理を複数使う時や、名前を付けて処理をまとめる時に宣言する。  
@@ -18,7 +18,7 @@ draft: false
 
 ## 関数宣言 / 呼び出し
 
-関数は `function` キーワードを使って以下様に宣言できる。  
+関数は `function` キーワードを使って以下の様に宣言できる。  
 ＊定義しただけでは処理は実行されない。
 
 ```js
@@ -93,7 +93,7 @@ myProfile.greeting();
 ## 他の関数定義
 
 本サイトでは上記の書き方を基本に行うが、以下の様な宣言方法もあるので注意。  
-＊呼び出し方法は上記同じ。
+＊呼び出し方法は上記と同じ。
 
 ```js
 /* 無名関数 */
@@ -133,21 +133,22 @@ eventTarget.addEventListener() メソッドを使用する。
 
 - イベントの発生源(_イベントターゲット_）には DOM エレメント, window, document などがある。
 - 発生時に実行する関数を*イベントリスナー*と言う。  
-  また、この関数にはイベントオブジェクト以外の引数を指定できない。
+  また、この関数には[イベントオブジェクト](#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88)以外の引数を指定できない。
 
 ## イベントの種類と例
 
-`イベント名` には `click`,`load`,`scroll` ,`mousemove` などなど所定のイベントを指定できる。  
+「イベント名」には `click`,`load`,`scroll` ,`mousemove` などなど所定のイベントを指定できる。  
 イベントターゲットはイベントの種類によって様々なので調べて使うこと。
 
 参考: [ブラウザイベントの紹介](https://ja.javascript.info/introduction-browser-events)
 
 ## イベントの削除
 
-追加したイベントの削除は`removeEventListener` を使う。
+追加したイベントの削除は`removeEventListener()` を使う。  
+「関数名」には addEventListener で登録した関数名と同じものを指定する。
 
 ```js
-イベントの発生源.removeEventListener("イベント名", 関数名);
+イベントの発生源.removeEventListener("イベント名", 追加した関数名);
 ```
 
 # クリックイベント
@@ -168,7 +169,7 @@ function showGreeting() {
 alertButton.addEventListener("click", showGreeting); // 関数名には `()`をつけない
 ```
 
-また addEventListener() の第 2 引数には無名関数を渡す事もできる。  
+また `addEventListener()` の第 2 引数には無名関数を渡す事もできる。  
 ＊ただし無名関数を使った場合は removeEventListener でイベントの削除ができない。
 
 ```js
@@ -183,7 +184,7 @@ alertButton.addEventListener("click", function () {
 
 > #### イベントオブジェクト
 >
-> イベントリスナーの引数には `イベントオブジェクト` という値が代入される。  
+> イベントリスナーの引数には _イベントオブジェクト_ という値が代入される。  
 > 発生した要素や、発生した位置や時間など、そのイベントに関する情報が色々と入っている。  
 > ＊イベントオブジェクトの中身はイベントの種類や発生した要素(イベントターゲット)によって変わる。
 >
@@ -193,10 +194,25 @@ alertButton.addEventListener("click", function () {
 > // 第一引数にイベントオブジェクトが入る。
 > function showEventObject(event) {
 >   console.log(event);
->   console.log(event.target); //イベント発生源（イベントターゲット）
+>   console.log(event.currentTarget); //イベント発生源（イベントターゲット）
 >   console.log(event.type); //イベント名
 >   console.log(event.pageX); //クリックされたX座標
 >   console.log(event.pageY); //クリックされたY座標
 > }
 > button.addEventListener("click", showEventObject);
+> ```
+>
+> #### event.preventDefault()
+>
+> `<a>` タグ等にクリックイベントを登録すると、リスナーが実行される前にページ遷移してしまう。（デフォルトの挙動が実行される。）
+> リスナーの中で `event.preventDefault()` メソッドを実行すると、それを防ぐ事ができる。
+>
+> ```js
+> const linkButton = document.querySelector("a");
+>
+> function handleAnchorEvent(event) {
+>   event.preventDefault(); // <a>タグをクリックしてもページ遷移しない。
+>   // 処理
+> }
+> linkButton.addEventListener("click", handleAnchorEvent);
 > ```

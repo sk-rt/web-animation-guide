@@ -114,6 +114,9 @@ const kanaCharacters = [
 console.log(kanaCharacters[1][3]); // ケ
 ```
 
+その他要素の追加・削除、ソート、フィルター、検索など配列型には様々な機能がある。  
+参考: [配列操作(追加, 削除, filter, map, reduce など)](https://www.wakuwakubank.com/posts/280-javascript-array-helper/)
+
 ## オブジェクト型(Object)
 
 オブジェクトは `{}` の中に `key: value` で値を`,`区切りで指定する。  
@@ -152,7 +155,7 @@ console.log(myProfile["friends"]); // ["Tanaka", "Yamada", "Saito"]
 > window / document を筆頭に JavaScript ではオブジェクトが頻出する。  
 > 例えば querySelector() で取得した element もオブジェクトで、element.style や element.classList はそのプロパティ。
 >
-> また、文字列や数値もオブジェクトの様に振る舞う。  
+> また、文字列型や数値型もオブジェクトの様に振る舞う。  
 > 参考: [https://qiita.com/hcr1s/items/172ba167ba44a35c2a45](https://qiita.com/hcr1s/items/172ba167ba44a35c2a45)
 >
 > ```js
