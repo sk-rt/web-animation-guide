@@ -4,7 +4,7 @@ date: "2021-04-01"
 excerpt: " setTimeout() / setInterval() を使った処理とrequestAnimationFrame() を使ったアニメーション"
 tags: ["応用"]
 featuredImage: ""
-exercises: [{ file: "", title: "タイマーアニメーション演習" }]
+exercises: [{ file: "js-timer-animation.zip", title: "タイマーアニメーション演習" }]
 draft: false
 ---
 
@@ -78,6 +78,8 @@ function loop() {
 loop();
 ```
 
+<iframe width="100%" height="300" src="//jsfiddle.net/sk_rt/q35f8z6o/embedded/result,js,html,css/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
 ## アニメーションのストップ `cancelAnimationFrame`
 
 setInterval と同じく、requestAnimationFrame は返り値として`リクエストID`を受け取れる。
@@ -99,7 +101,7 @@ function stop() {
   cancelAnimationFrame(reqID);
 }
 const stopButton = document.querySelector("stop");
-stopButton.addEventListner("click", function () {});
+stopButton.addEventListner("click", stop);
 ```
 
 もしくは loop 関数内で停止するかどうかの判定ができる時は、  
@@ -115,40 +117,22 @@ function loop() {
     requestAnimationFrame(loop);
   }
 }
-requestAnimationFrame(loop);
+loop();
 ```
 
-<!-- # setInterval を使ったアニメーション
+## 三角関数を使った例
 
-## 例 1
-
-<iframe height="400" style="width: 100%;" scrolling="no" title="setInterval" src="https://codepen.io/RsakaiForEducation/embed/bGGVVxr?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/RsakaiForEducation/pen/bGGVVxr'>setInterval</a> by R Sakai
-  (<a href='https://codepen.io/RsakaiForEducation'>@RsakaiForEducation</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
-## 例 2 -->
-<!--
-`Math.sin()` `Math.cos()` を使った円運動。
+`Math.sin()` `Math.cos()` を使った円運動。  
 ＊サインもコサインも常に -1〜1 の値になる。
 
-参考： [Math.sin()](http://www.htmq.com/js/math_sin.shtml)
+<iframe width="100%" height="400" src="//jsfiddle.net/sk_rt/ncLpr9b3/embedded/result,js,html,css/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
-<iframe height="500" style="width: 100%;" scrolling="no" title="setInterval+sin()/cos()" src="https://codepen.io/RsakaiForEducation/embed/ZEEbbPm?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/RsakaiForEducation/pen/ZEEbbPm'>setInterval+sin()/cos()</a> by R Sakai
-  (<a href='https://codepen.io/RsakaiForEducation'>@RsakaiForEducation</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+X 軸だけ円運動 & click イベントで Start/Stop
 
-## 例 3
+<iframe width="100%" height="300" src="//jsfiddle.net/sk_rt/ufg3rdv6/embedded/result,js,html,css/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
-click イベントでアニメーションの開始/停止
+図解: wikipedia より
 
-<iframe height="400" style="width: 100%;" scrolling="no" title="setInterval+event" src="https://codepen.io/RsakaiForEducation/embed/xxxwZOG?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/RsakaiForEducation/pen/xxxwZOG'>setInterval+event</a> by R Sakai
-  (<a href='https://codepen.io/RsakaiForEducation'>@RsakaiForEducation</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+![](https://upload.wikimedia.org/wikipedia/commons/b/bd/Sine_and_cosine_animation.gif)
 
-<iframe height="400" style="width: 100%;" scrolling="no" title="requestAnimationFrame" src="https://codepen.io/RsakaiForEducation/embed/dyyYGmW?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/RsakaiForEducation/pen/dyyYGmW'>requestAnimationFrame</a> by R Sakai
-  (<a href='https://codepen.io/RsakaiForEducation'>@RsakaiForEducation</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe> -->
+参考: [三角関数、何に使うの？→ 点を回すことができます（すごい）](https://www.ajimatics.com/entry/2019/01/11/092529)

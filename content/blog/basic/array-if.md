@@ -263,4 +263,13 @@ for (let index = 0; index < elements.length; index++) {
 }
 ```
 
+querySelectorAll()で取得した要素が存在するかどうかは `elements.length` が `0`かどうかで判定可能
+
+```js
+const elements = document.querySelectorAll(".element");
+if (elements.length !== 0) {
+  // .elementが1つ以上存在する。
+}
+```
+
 <iframe width="100%" height="400" src="//jsfiddle.net/sk_rt/m7b91aqf/73/embedded/result,js,html,css/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
