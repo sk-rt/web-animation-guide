@@ -27,8 +27,7 @@ setTimeout(greeting, 3000); // 3秒後に greeting を実行
 
 ## setInterval( 関数 , 時間 )
 
-一定時間ごとに処理を実行する。  
-＊`number++`は `number = number+1`と同じ意味 (1 を加算)
+指定した時間ごとに処理を実行する。
 
 ```js
 let number = 1;
