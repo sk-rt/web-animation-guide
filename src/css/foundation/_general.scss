@@ -21,6 +21,9 @@ $c-font: #f0f3f3;
     --bg-color-2: #1a2228;
     --bg-color-3: #212a32;
 }
+html:not(:focus-within) {
+    scroll-behavior: smooth;
+}
 /* ~~~~~ SP ~~~~~~ */
 @media (max-width: 480px) {
     html {
