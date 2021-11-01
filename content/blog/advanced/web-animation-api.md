@@ -4,7 +4,7 @@ date: "2021-04-10"
 excerpt: "標準仕様のWeb Animations APIを使ったアニメーション"
 tags: ["応用"]
 featuredImage: ""
-exercises: [{ file: "", title: "" }]
+exercises: [{ file: "js-web-animation-api.zip", title: "Web Animations API 演習" }]
 draft: false
 ---
 
@@ -126,14 +126,14 @@ element.animate(
 );
 ```
 
-| オプション   | 説明                                                                                     |
-| ------------ | ---------------------------------------------------------------------------------------- |
-| `duration`   | アニメーションの再生時間。ミリ秒で指定。 CSS の`animation-duration` と同様               |
-| `delay`      | アニメーションの再生を遅らせる時間。ミリ秒で指定。CSS の`animation-delay` と同様         |
-| `easing`     | イージングを指定。`linear`,`ease`など。＊CSS の `animation-timing-function`と同様。      |
-| `direction`  | アニメーションの再生方向。CSS の`animation-direction`と同様。                            |
-| `iterations` | 繰り返す回数。`Inifinity` で無限に繰り返し。 CSS `animation-iteration-count` と同様。    |
-| `fill`       | アニメーションの実行の前後にどう style を適用するか。 CSS `animation-fill-mode` と同様。 |
+| オプション   | 説明                                                                                                                                                        |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `duration`   | アニメーションの再生時間。ミリ秒で指定。 <br>CSS の`animation-duration` と同様。<br>デフォルト値 `0`                                                        |
+| `delay`      | アニメーションの再生を遅らせる時間。ミリ秒で指定。<br>CSS の`animation-delay` と同様。<br>デフォルト値 `0`                                                  |
+| `easing`     | イージングを指定。`linear`,`ease`, `ease-in`, `cubic-bezier()`など。<br>CSS の `animation-timing-function`と同様。<br>デフォルト値 `linear`                 |
+| `direction`  | アニメーションの再生方向。<br>CSS の`animation-direction`と同様。<br>デフォルト値 `normal`                                                                  |
+| `iterations` | 繰り返す回数。`Inifinity` で無限に繰り返し。 <br>CSS の `animation-iteration-count` と同様。<br>デフォルト値 `1`                                            |
+| `fill`       | アニメーションの実行の前後にどう style を適用するか。 <br>CSS の `animation-fill-mode` と同様。通常は`both`か`none`のどちらかで OK。<br>デフォルト値 `none` |
 
 ＊easing については[こちらを参考](https://web-d.netlify.app/animation-transition/#%EF%BC%8A%E3%82%A4%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)  
 ＊他、`iterationStart` , `endDelay`, `composite` などのオプションあり。

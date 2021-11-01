@@ -1,0 +1,43 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.title {
+    font-family: "Poppins", sans-serif;
+    font-size: 10vw;
+    line-height: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+/* 文字行 */
+.title-row {
+    display: inline-block;
+    position: relative;
+    opacity: 0; /* 初期状態では非表示に */
+}
+/* 装飾 */
+.ornament {
+    position: absolute;
+    top: -5vw;
+    left: -5vw;
+    width: 20vw;
+    height: 20vw;
+    background: radial-gradient(at 10% 10%, #ff2aea, #ff974d);
+    z-index: -1;
+    opacity: 0; /* 初期状態では非表示に */
+}
