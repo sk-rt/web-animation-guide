@@ -75,3 +75,9 @@ console.log(randomInt); // 4〜10のどれか
 ランダムな位置に移動
 
 <iframe width="100%" height="450" src="//jsfiddle.net/sk_rt/zv7yexfw/embedded/result,js,html,css/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+## 例 4
+
+Web Animation API + ランダム
+
+<iframe width="100%" height="400" src="//jsfiddle.net/sk_rt/ym8bu3nt/embedded/result,js,html,css/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
