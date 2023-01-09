@@ -65,7 +65,7 @@ if (element) {
 
 - [条件分岐 · JavaScript Primer](https://jsprimer.net/basic/condition/)
 - [Falsy](https://developer.mozilla.org/ja/docs/Glossary/Falsy)
-- [Truthy](https://developer.mozilla.org/ja/docs/Glossary/Falsy)
+- [Truthy](https://developer.mozilla.org/ja/docs/Glossary/Truthy)
 
 ## [比較演算子](/basic/data-type-operator/#%E6%AF%94%E8%BC%83%E6%BC%94%E7%AE%97%E5%AD%90)を使った条件式
 
