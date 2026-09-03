@@ -32,10 +32,6 @@ module.exports = {
               disableBgImageOnAlpha: true,
             },
           },
-          //
-          //   {
-          //     resolve: `gatsby-remark-attr`,
-          //   },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
@@ -65,12 +61,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `UA-118267445-3`,
-      },
-    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
