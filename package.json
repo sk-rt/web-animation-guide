@@ -59,8 +59,8 @@
     "url": "git+https://github.com/sk-rt/web-animation-guide.git"
   },
   "scripts": {
-    "build": "gatsby clean && gatsby build",
-    "develop": "gatsby develop -p 8989",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider gatsby clean && NODE_OPTIONS=--openssl-legacy-provider gatsby build",
+    "develop": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop -p 8989",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "lint:fix": "eslint src/**/*.js --fix",
