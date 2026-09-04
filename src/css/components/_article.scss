@@ -57,6 +57,7 @@
 
 .p-article__body {
     line-height: 1.9;
+    letter-spacing: 0.05em;
     > h2:first-of-type {
         font-size: 0.9em;
         margin-bottom: -2.5em;
@@ -89,7 +90,7 @@
     h1 {
         padding: 0.4em 0em;
         border-bottom: 1px solid var(--border-color-2);
-        font-weight: 600;
+        font-weight: 700;
         margin-top: 2em;
         margin-bottom: 1em;
         line-height: 1.3;

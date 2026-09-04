@@ -32,10 +32,11 @@ html:not(:focus-within) {
 }
 
 body {
-    letter-spacing: 0.05em;
     background-color: var(--bg-color-0);
     color: var(--font-color);
     line-height: 1.6;
+    letter-spacing: 0.02em;
+    font-feature-settings: 'pwid';
 }
 
 a {
@@ -50,6 +51,7 @@ h4,
 h5,
 h6 {
     font-weight: 500;
+    font-feature-settings: 'palt';
 }
 
 button {

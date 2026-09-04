@@ -14,7 +14,7 @@ const typography = new Typography({
     'メイリオ',
     'Meiryo',
     'Roboto',
-    'sans-serif'
+    'sans-serif',
   ],
   bodyFontFamily: [
     '-apple-system',
@@ -27,8 +27,8 @@ const typography = new Typography({
     'メイリオ',
     'Meiryo',
     'Roboto',
-    'sans-serif'
-  ]
+    'sans-serif',
+  ],
 });
 
 // Hot reload typography in development.
