@@ -1,5 +1,5 @@
 ---
-title: Webアニメーション
+title: インタラクションとアニメーション
 date: "2019-01-01"
 excerpt: "アニメーションの手法や実装方法について"
 tags: ["イントロ"]
@@ -7,24 +7,35 @@ featuredImage: ""
 exercises: [{ file: "", title: "" }]
 ---
 
-# アニメーションの手法
+# インタラクションについて
+
+インタラクションとは、ユーザーの行動（**アクション**） とシステムの反応（**リアクション**）のこと。  
+クリック、スクロール、ホバー、タップ、スワイプ、ページ遷移、ジャイロセンサーなど、Web UI 上で行う操作はすべてインタラクションの起点である。
+
+ユーザーのアクションに対して適切なリアクションを返すことで、ユーザーの理解を助けたり、感情に働きかけたりすることができる。
+
+# アニメーションの技術
 
 ## CSS アニメーション
 
-`transition` や `animation` プロパティを使って、[CSS のみでアニメーション](https://web-d.netlify.app/animation-transition/)できる。比較的簡単に実装できるが、複雑なアニメーションは難しい。  
-また、`:hover`,`:active` などを除いて、**ユーザーのアクションを取得できない**。（マウスイベント、タッチイベント、スクロールイベント、フォームイベントなど）
+HTML 要素のスタイルを滑らかに変化させることで動きを見せるアニメーション。  
+CSS の `transition` や `animation` プロパティが最も手軽。  
+（詳細は [CSS アニメーション](https://web-d.netlify.app/animation-transition/)）
+
+ただし、CSS のみで検知できるユーザーアクションは限定的。  
+`:hover`,`:active` `:checked` などの擬似クラス系に加え、スクロール量と連動できる `Scroll-driven Animations` やページ遷移時に発火する `View Transition` などがある。  
+`クリック` などを検知するには JavaScript を用いる必要がある。
 
 <iframe width="100%" height="300" src="//jsfiddle.net/sk_rt/afvyxp1t/embedded/result,html,css,/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
-## JavaScript を使ったアニメーション
+## JavaScript を使ったインタラクション
 
-CSS アニメーションと組み合わせたり、style を連続して変更する事で HTML 要素をアニメーションさせる。  
-クリックやスクロールなどのユーザーインタラクションやセンサーなどのユーザー環境などを取得して**インタラクティブなアニメーション**が可能。
+`イベント` という仕組みで様々なユーザーアクションを検知できる。
 
 また、標準のアニメーション機能 [Web Animation API](https://developer.mozilla.org/ja/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
-や目的に応じた豊富な JavaScript ライブラリがある。
+や目的に応じた豊富な JavaScript ライブラリ（例: [GSAP](https://ics.media/entry/220822/)）があり、CSS のみでは難しい複雑なアニメーションも作成できる。
 
-<iframe width="100%" height="300" src="//jsfiddle.net/sk_rt/q35f8z6o/embedded/result,html,js,css/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="400" src="//jsfiddle.net/sk_rt/q35f8z6o/200/embedded/result,js,html,css/dark/" frameborder="0" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
 ## その他
 
