@@ -56,8 +56,8 @@
     "serve": "gatsby serve",
     "lint:fix": "eslint src/**/*.js --fix",
     "clean": "gatsby clean",
-    "exercise-dev": "yarn --cwd ./exercises/ dev",
-    "exercise-dist": "yarn --cwd ./exercises/ dist"
+    "exercise-dev": "npm run --prefix ./exercises/ dev",
+    "exercise-dist": "npm run --prefix ./exercises/ dist"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
@@ -68,5 +68,6 @@
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-standard": "^5.0.0",
     "sass": "^1.39.0"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

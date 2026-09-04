@@ -5,12 +5,6 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "dev": "npm run serve",
-        "serve": "browser-sync start --config bs-config.js",
-        "dist": "cpx 'public/**/*.zip' ../static/exercises/"
-    },
-    "devDependencies": {
-        "browser-sync": "^2.27.5",
-        "cpx": "^1.5.0"
+        "dist": "rsync -av --include='*/' --include='*.zip' --exclude='*' public/ ../static/exercises/"
     }
 }
